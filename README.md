@@ -99,7 +99,7 @@ Direct file editing, terminal, and Git integration included.
 
 ## 📖 Table of Contents
 
-**Chapter 1: My First Vibe Coding** [📝 Prompts](https://github.com/taehojo/vibecoding-eng/blob/main/PROMPTS.md#chapter-1-my-first-vibe-coding)
+**Chapter 1: My First Vibe Coding** [📝 Prompts](https://github.com/PacktPublishing/Claude-Code-in-Action/blob/main/PROMPTS.md#chapter-1-my-first-vibe-coding)
 - 01-1 My Coding Partner, AI Assistant
   - Vibe coding
   - The emergence of AI integration tools
@@ -113,7 +113,7 @@ Direct file editing, terminal, and Git integration included.
 
 > **Example**: My first web page — a personal start homepage with today's date and time, and a search bar (built with Claude Artifacts)
 
-**Chapter 2: Maximizing AI's Potential by 200% with Effective Prompts** [📝 Prompts](https://github.com/taehojo/vibecoding-eng/blob/main/PROMPTS.md#chapter-2-maximizing-ais-potential-by-200-with-effective-prompts)
+**Chapter 2: Maximizing AI's Potential by 200% with Effective Prompts** [📝 Prompts](https://github.com/PacktPublishing/Claude-Code-in-Action/blob/main/PROMPTS.md#chapter-2-maximizing-ais-potential-by-200-with-effective-prompts)
 - 02-1 The Secrets of Prompts That Awaken AI
   - The importance of prompts
   - Drafting a product proposal
@@ -126,7 +126,7 @@ Direct file editing, terminal, and Git integration included.
 
 > **Example**: Marketing portfolio website — a portfolio a recruiter can grasp in 30 seconds (hero-introduction, performance-metrics, and case-studies sections built step by step)
 
-**Chapter 3: Getting Started with Claude Code** [📝 Prompts](https://github.com/taehojo/vibecoding-eng/blob/main/PROMPTS.md#chapter-3-getting-started-with-claude-code)
+**Chapter 3: Getting Started with Claude Code** [📝 Prompts](https://github.com/PacktPublishing/Claude-Code-in-Action/blob/main/PROMPTS.md#chapter-3-getting-started-with-claude-code)
 - 03-1 Installing Claude Code
   - Setting up the practice environment
   - Launching the terminal
@@ -140,7 +140,7 @@ Direct file editing, terminal, and Git integration included.
 
 > **Example**: Handwriting recognition program [🎯 Live demo](https://vibecoding-eng-ch03.vercel.app) — a digit recognition desktop app built on the MNIST dataset, extended to a web version (using a hierarchical folder structure)
 
-**Chapter 4: Practical Use of Claude Code** [📝 Prompts](https://github.com/taehojo/vibecoding-eng/blob/main/PROMPTS.md#chapter-4-practical-use-of-claude-code)
+**Chapter 4: Practical Use of Claude Code** [📝 Prompts](https://github.com/PacktPublishing/Claude-Code-in-Action/blob/main/PROMPTS.md#chapter-4-practical-use-of-claude-code)
 - 04-1 Learning Claude Code Commands with Step-by-Step Prompts
   - Writing step-by-step prompts
   - Executing step-by-step prompts
@@ -156,9 +156,9 @@ Direct file editing, terminal, and Git integration included.
 
 > **Example**: Todo app [🎯 Live demo](https://vibecoding-eng-ch04.vercel.app) — add/edit/delete tasks, category tags, progress dashboard, dark mode (mobile-style and desktop-optimized layouts)
 
-**Chapter 5: Systematic Development and Management Through Game Building** [📝 Prompts](https://github.com/taehojo/vibecoding-eng/blob/main/PROMPTS.md#chapter-5-systematic-development-and-management-through-game-building)
+**Chapter 5: Systematic Development and Management Through Game Building** [📝 Prompts](https://github.com/PacktPublishing/Claude-Code-in-Action/blob/main/PROMPTS.md#chapter-5-systematic-development-and-management-through-game-building)
 - 05-1 Creating AI Content Without Hallucinations
-  - Step 1: Implementing the quiz game [📥 Download](https://download-directory.github.io/?url=https://github.com/taehojo/vibecoding-eng/tree/main/Study-03/Study-03-basic)
+  - Step 1: Implementing the quiz game [📥 Download](https://download-directory.github.io/?url=https://github.com/PacktPublishing/Claude-Code-in-Action/tree/main/Study-03/Study-03-basic)
   - Fixing hallucinations
 - 05-2 Boosting Development Efficiency with Automation
   - Step 2: Extending the game
@@ -173,7 +173,7 @@ Direct file editing, terminal, and Git integration included.
 
 > **Example**: Trivia quiz game [🎯 Live demo](https://vibecoding-eng-ch05.vercel.app) — four-option multiple choice, category modes, scoring system, leaderboard (with hallucination verification guidelines and custom command automation)
 
-**Chapter 6: Giving Claude Code Wings with APIs** [📝 Prompts](https://github.com/taehojo/vibecoding-eng/blob/main/PROMPTS.md#chapter-6-giving-claude-code-wings-with-apis)
+**Chapter 6: Giving Claude Code Wings with APIs** [📝 Prompts](https://github.com/PacktPublishing/Claude-Code-in-Action/blob/main/PROMPTS.md#chapter-6-giving-claude-code-wings-with-apis)
 - 06-1 Setting Up APIs in Claude Code
   - API concepts and how to use them
   - Choosing an AI model
@@ -184,9 +184,9 @@ Direct file editing, terminal, and Git integration included.
   - Step 2: Generating recipes
   - Step 3: Saving recipes to a user profile
 
-> **Example**: FridgeChef app [🎯 Live demo](https://vibecoding-eng-ch06.vercel.app) — upload a fridge photo ([📥 sample input](https://raw.githubusercontent.com/taehojo/vibecoding-eng/main/input-examples/fridge2.jpg)) → ingredient recognition → recipe recommendations → user profile/save feature (built in 3 steps)
+> **Example**: FridgeChef app [🎯 Live demo](https://vibecoding-eng-ch06.vercel.app) — upload a fridge photo ([📥 sample input](https://raw.githubusercontent.com/PacktPublishing/Claude-Code-in-Action/main/input-examples/fridge2.jpg)) → ingredient recognition → recipe recommendations → user profile/save feature (built in 3 steps)
 
-**Chapter 7: Building a Development Team with Claude Code AI Agents** [📝 Prompts](https://github.com/taehojo/vibecoding-eng/blob/main/PROMPTS.md#chapter-7-building-a-development-team-with-claude-code-ai-agents)
+**Chapter 7: Building a Development Team with Claude Code AI Agents** [📝 Prompts](https://github.com/PacktPublishing/Claude-Code-in-Action/blob/main/PROMPTS.md#chapter-7-building-a-development-team-with-claude-code-ai-agents)
 - 07-1 Understanding Claude Code AI Agents
   - My first agent: a code reviewer
   - An optimization agent
@@ -200,9 +200,9 @@ Direct file editing, terminal, and Git integration included.
 
 > **Examples**:
 > - AI Empathy Diary app [🎯 Live demo](https://vibecoding-eng-ch07.vercel.app): write one line about your day → emotion analysis → empathetic message (agent collaboration: backend, frontend, QA)
-> - PDF Summarizer AI [🎯 Live demo](https://vibecoding-eng-ch07.vercel.app/pdf): upload a PDF ([📥 sample input](https://raw.githubusercontent.com/taehojo/vibecoding-eng/main/input-examples/korean-spelling.pdf) — a sample PDF document in Korean) → text extraction → summary/analysis (5-agent collaboration: planning, backend, AI integration, frontend, QA)
+> - PDF Summarizer AI [🎯 Live demo](https://vibecoding-eng-ch07.vercel.app/pdf): upload a PDF ([📥 sample input](https://raw.githubusercontent.com/PacktPublishing/Claude-Code-in-Action/main/input-examples/korean-spelling.pdf) — a sample PDF document in Korean) → text extraction → summary/analysis (5-agent collaboration: planning, backend, AI integration, frontend, QA)
 
-**Chapter 8: Going Beyond Claude Code's Limits with MCP** [📝 Prompts](https://github.com/taehojo/vibecoding-eng/blob/main/PROMPTS.md#chapter-8-going-beyond-claude-codes-limits-with-mcp)
+**Chapter 8: Going Beyond Claude Code's Limits with MCP** [📝 Prompts](https://github.com/PacktPublishing/Claude-Code-in-Action/blob/main/PROMPTS.md#chapter-8-going-beyond-claude-codes-limits-with-mcp)
 - 08-1 Understanding MCP and Connecting It to Claude Code
   - The unlimited AI extensibility MCP unlocks
   - Connecting Claude Code to Notion
@@ -229,7 +229,7 @@ The hands-on projects for each chapter are stored in the following folders.
 |:---:|:---:|:---|:---:|
 | 3 | `Study-01` | Handwriting recognition program | [🎯 Live demo](https://vibecoding-eng-ch03.vercel.app) |
 | 4 | `Study-02` | Todo app | [🎯 Live demo](https://vibecoding-eng-ch04.vercel.app) |
-| 5 | `Study-03-basic` | Trivia quiz game (basic) | [📥 Download](https://download-directory.github.io/?url=https://github.com/taehojo/vibecoding-eng/tree/main/Study-03/Study-03-basic) |
+| 5 | `Study-03-basic` | Trivia quiz game (basic) | [📥 Download](https://download-directory.github.io/?url=https://github.com/PacktPublishing/Claude-Code-in-Action/tree/main/Study-03/Study-03-basic) |
 | 5 | `Study-03-advanced` | Trivia quiz game (advanced) | [🎯 Live demo](https://vibecoding-eng-ch05.vercel.app) |
 | 6 | `Study-04` | FridgeChef (AI recipe recommendations) | [🎯 Live demo](https://vibecoding-eng-ch06.vercel.app) |
 | 7 | `Study-05` | AI Empathy Diary | [🎯 Live demo](https://vibecoding-eng-ch07.vercel.app) |
