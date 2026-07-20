@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empathy AI Diary Test</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            resize: vertical;
+            box-sizing: border-box;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .emotion-display {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .emotion-tag {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .emotion-score {
+            background-color: #2196F3;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 14px;
+        }
+
+        .empathy-message {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            font-style: italic;
+            color: #555;
+        }
+
+        .loading {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+        }
+
+        .error {
+            background-color: #ffebee;
+            border-left-color: #f44336;
+            color: #c62828;
+        }
+
+        .test-examples {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #e8f5e8;
+            border-radius: 8px;
+        }
+
+        .test-examples h3 {
+            margin-top: 0;
+            color: #2e7d32;
+        }
+
+        .example-btn {
+            background-color: #81C784;
+            margin: 5px;
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+
+        .example-btn:hover {
+            background-color: #66BB6A;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤗 Empathy AI Diary</h1>
+
+        <div class="form-group">
+            <label for="diaryText">Write today's diary entry:</label>
+            <textarea
+                id="diaryText"
+                placeholder="What happened today? What emotions did you feel? Feel free to write anything..."
+            ></textarea>
+        </div>
+
+        <button onclick="analyzeDiary()" id="analyzeBtn">Analyze Emotions</button>
+
+        <div id="result" style="display: none;"></div>
+
+        <div class="test-examples">
+            <h3>📝 Test Examples</h3>
+            <p>Click the buttons below to try diary examples with different emotions:</p>
+
+            <button class="example-btn" onclick="setExampleText('joy')">Joy</button>
+            <button class="example-btn" onclick="setExampleText('sadness')">Sadness</button>
+            <button class="example-btn" onclick="setExampleText('anger')">Anger</button>
+            <button class="example-btn" onclick="setExampleText('fear')">Fear</button>
+            <button class="example-btn" onclick="setExampleText('mixed')">Mixed Emotions</button>
+        </div>
+    </div>
+
+    <script src="backend.js"></script>
+    <script>
+        // Example texts
+        const examples = {
+            joy: "Today was such a good day! As soon as I woke up, I heard good news from a friend, and in the afternoon I got a message that the project I had been preparing for so long was successfully completed. In the evening, I had a delicious dinner with my family and enjoyed our time together. I hope these happy moments keep coming.",
+
+            sadness: "Today was a really hard day. It rained from the morning, which made me feel gloomy, and things did not go well at work either. I heard that a colleague I had worked with for a long time is leaving the company, and I felt lonely, as if I were left behind all alone. Even after coming home, I kept feeling sad and ended up in tears.",
+
+            anger: "I was really angry today. Someone cut in line at the subway and it ruined my mood, and something unfair happened at work too. Someone else took the idea I had worked so hard on and presented it, and nobody said anything about it. This unfair situation is so frustrating and infuriating.",
+
+            fear: "I have an important interview tomorrow, so I am so nervous and anxious. I prepared all night, but it still feels like it is not enough, and I keep worrying about what to do if I make a mistake. My heart is pounding and my palms are sweaty. I am scared because I am not sure I can do well.",
+
+            mixed: "Today was a really complicated day. In the morning, I was happy to hear good news, but in the afternoon I had a small argument with a friend and felt upset. In the evening, I spent time alone and many thoughts crossed my mind. I felt happy, sad, and sometimes even angry. Life really is complicated."
+        };
+
+        function setExampleText(emotion) {
+            document.getElementById('diaryText').value = examples[emotion];
+        }
+
+        async function analyzeDiary() {
+            const diaryText = document.getElementById('diaryText').value.trim();
+            const resultDiv = document.getElementById('result');
+            const analyzeBtn = document.getElementById('analyzeBtn');
+
+            if (!diaryText) {
+                alert('Please enter your diary content.');
+                return;
+            }
+
+            // Loading state
+            analyzeBtn.disabled = true;
+            analyzeBtn.textContent = 'Analyzing...';
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = '<div class="loading">The AI is analyzing your emotions... Please wait a moment.</div>';
+
+            try {
+                console.log('Starting diary analysis:', diaryText);
+                const result = await analyzeDiaryEntry(diaryText);
+                console.log('Analysis result:', result);
+
+                // Display results
+                resultDiv.className = 'result';
+                resultDiv.innerHTML = `
+                    <div class="emotion-display">
+                        <span class="emotion-tag">${result.emotionKorean || result.emotion}</span>
+                        <span class="emotion-score">Intensity: ${result.emotionScore}/10</span>
+                    </div>
+                    <div class="empathy-message">
+                        ${result.empathyMessage}
+                    </div>
+                `;
+
+            } catch (error) {
+                console.error('Analysis error:', error);
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = `
+                    <strong>An error occurred:</strong><br>
+                    ${error.message}<br><br>
+                    <small>Please check your internet connection and try again.</small>
+                `;
+            } finally {
+                // Restore button state
+                analyzeBtn.disabled = false;
+                analyzeBtn.textContent = 'Analyze Emotions';
+            }
+        }
+
+        // Run analysis with the Enter key
+        document.getElementById('diaryText').addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.key === 'Enter') {
+                analyzeDiary();
+            }
+        });
+
+        // Connection test on page load
+        window.addEventListener('load', async function() {
+            console.log('Empathy AI Diary page has loaded.');
+
+            // Backend connection test
+            try {
+                const isConnected = await empathyDiary.testConnection();
+                if (isConnected) {
+                    console.log('✅ API connection successful');
+                } else {
+                    console.log('⚠️ API connection failed - running in fallback analysis mode');
+                }
+            } catch (error) {
+                console.error('Error during connection test:', error);
+            }
+        });
+    </script>
+</body>
+</html>

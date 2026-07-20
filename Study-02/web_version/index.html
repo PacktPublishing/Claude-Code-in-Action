@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks - PC Version</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="app-title">
+                    <i class="fas fa-tasks"></i>
+                    My Tasks
+                </h1>
+                <button class="theme-toggle" id="themeToggle" title="Change theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+
+            <!-- Category filter -->
+            <div class="category-filter">
+                <h3>Categories</h3>
+                <button class="filter-btn active" data-category="all">
+                    <i class="fas fa-list"></i>
+                    <span>All</span>
+                    <span class="count" id="countAll">0</span>
+                </button>
+                <button class="filter-btn" data-category="work">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Work</span>
+                    <span class="count" id="countWork">0</span>
+                </button>
+                <button class="filter-btn" data-category="personal">
+                    <i class="fas fa-home"></i>
+                    <span>Personal</span>
+                    <span class="count" id="countPersonal">0</span>
+                </button>
+                <button class="filter-btn" data-category="study">
+                    <i class="fas fa-book"></i>
+                    <span>Study</span>
+                    <span class="count" id="countStudy">0</span>
+                </button>
+            </div>
+
+            <!-- Progress dashboard -->
+            <div class="progress-dashboard">
+                <h3>Progress</h3>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Overall</span>
+                        <span class="progress-percent" id="overallPercent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill overall" id="overallProgress"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Work</span>
+                        <span class="progress-percent" id="workPercent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill work" id="workProgress"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Personal</span>
+                        <span class="progress-percent" id="personalPercent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill personal" id="personalProgress"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Study</span>
+                        <span class="progress-percent" id="studyPercent">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill study" id="studyProgress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick actions -->
+            <div class="quick-actions">
+                <button class="action-btn" id="clearCompleted">
+                    <i class="fas fa-broom"></i>
+                    Clear Completed
+                </button>
+                <button class="action-btn" id="exportData">
+                    <i class="fas fa-download"></i>
+                    Export Data
+                </button>
+                <button class="action-btn" id="importData">
+                    <i class="fas fa-upload"></i>
+                    Import Data
+                </button>
+                <input type="file" id="importFile" accept=".json" style="display: none;">
+            </div>
+
+            <!-- Keyboard shortcuts guide -->
+            <div class="keyboard-shortcuts">
+                <h3>Shortcuts</h3>
+                <div class="shortcut-item">
+                    <kbd>Ctrl + Enter</kbd>
+                    <span>Add task</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>Ctrl + /</kbd>
+                    <span>Focus search</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>Alt + K</kbd>
+                    <span>Keyword settings</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main content area -->
+        <main class="main-content">
+            <!-- Top header -->
+            <header class="main-header">
+                <div class="quote-section" id="quoteSection">
+                    <i class="fas fa-lightbulb"></i>
+                    <span class="quote-text" id="quoteText"></span>
+                </div>
+
+                <!-- Search bar -->
+                <div class="search-section">
+                    <div class="search-container">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search tasks... (Ctrl + /)">
+                    </div>
+
+                    <!-- Sort options -->
+                    <select class="sort-select" id="sortSelect">
+                        <option value="newest">Newest first</option>
+                        <option value="oldest">Oldest first</option>
+                        <option value="category">By category</option>
+                        <option value="completed">By completion</option>
+                    </select>
+                </div>
+            </header>
+
+            <!-- Task input section -->
+            <div class="input-section">
+                <div class="input-container">
+                    <input type="text" id="todoInput" placeholder="Enter a task... (Press Enter to add)">
+                    <select id="categorySelect">
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="study">Study</option>
+                    </select>
+                    <button id="addBtn">
+                        <i class="fas fa-plus"></i>
+                        Add
+                    </button>
+                </div>
+
+                <!-- Automatic category suggestion -->
+                <div class="category-suggestion" id="categorySuggestion" style="display: none;">
+                    <i class="fas fa-magic"></i>
+                    <span class="suggestion-text"></span>
+                    <button class="suggestion-apply">Apply</button>
+                    <button class="suggestion-dismiss">Dismiss</button>
+                </div>
+            </div>
+
+            <!-- Task list -->
+            <div class="todo-list-container">
+                <div class="list-header">
+                    <h2 id="listTitle">All Tasks</h2>
+                    <span class="todo-count" id="todoCount">0 items</span>
+                </div>
+
+                <ul class="todo-list" id="todoList">
+                    <!-- Generated dynamically -->
+                </ul>
+
+                <div class="empty-state" id="emptyState">
+                    <i class="fas fa-clipboard-list"></i>
+                    <p>No tasks registered.</p>
+                    <span>Try adding a new task!</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Keyword settings modal -->
+    <div class="modal" id="keywordModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Category Keyword Settings</h2>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="keyword-section">
+                    <h3>Work Keywords</h3>
+                    <div class="keyword-input-group">
+                        <input type="text" id="workKeywords" placeholder="Enter keywords separated by commas">
+                        <div class="keyword-tags" id="workTags"></div>
+                    </div>
+                </div>
+                <div class="keyword-section">
+                    <h3>Personal Keywords</h3>
+                    <div class="keyword-input-group">
+                        <input type="text" id="personalKeywords" placeholder="Enter keywords separated by commas">
+                        <div class="keyword-tags" id="personalTags"></div>
+                    </div>
+                </div>
+                <div class="keyword-section">
+                    <h3>Study Keywords</h3>
+                    <div class="keyword-input-group">
+                        <input type="text" id="studyKeywords" placeholder="Enter keywords separated by commas">
+                        <div class="keyword-tags" id="studyTags"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-save" id="saveKeywords">Save</button>
+                <button class="btn-cancel" id="cancelKeywords">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sortable.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

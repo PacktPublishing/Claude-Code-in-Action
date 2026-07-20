@@ -1,0 +1,4742 @@
+[
+  {
+    "id": "STU009",
+    "name": "Isabella Clark",
+    "class": "Class 2",
+    "quizHistory": [
+      {
+        "date": "2025-08-15",
+        "totalQuestions": 10,
+        "correctAnswers": 9,
+        "score": 90,
+        "timeSpent": 442,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-17",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 442,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 532,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 725,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 789,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 642,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 763,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 520,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      }
+    ],
+    "averageScore": 78,
+    "grade": "A"
+  },
+  {
+    "id": "STU005",
+    "name": "Emma Davis",
+    "class": "Class 1",
+    "quizHistory": [
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 549,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 359,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 437,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 9,
+        "score": 90,
+        "timeSpent": 396,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 702,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      }
+    ],
+    "averageScore": 76,
+    "grade": "A"
+  },
+  {
+    "id": "STU020",
+    "name": "Chloe Wright",
+    "class": "Class 4",
+    "quizHistory": [
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 9,
+        "score": 90,
+        "timeSpent": 492,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 309,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 866,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 709,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 811,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      }
+    ],
+    "averageScore": 76,
+    "grade": "A"
+  },
+  {
+    "id": "STU015",
+    "name": "Amelia Lewis",
+    "class": "Class 3",
+    "quizHistory": [
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 640,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 641,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 402,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 9,
+        "score": 90,
+        "timeSpent": 319,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 397,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 486,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      }
+    ],
+    "averageScore": 75,
+    "grade": "A"
+  },
+  {
+    "id": "STU007",
+    "name": "Ava Moore",
+    "class": "Class 2",
+    "quizHistory": [
+      {
+        "date": "2025-08-17",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 312,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 553,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 369,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 619,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 504,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 557,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 436,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      }
+    ],
+    "averageScore": 73,
+    "grade": "B"
+  },
+  {
+    "id": "STU011",
+    "name": "Mia Thomas",
+    "class": "Class 3",
+    "quizHistory": [
+      {
+        "date": "2025-08-13",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 304,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-15",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 731,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-17",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 488,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 786,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 895,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 662,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 343,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 813,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 736,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "easy"
+      }
+    ],
+    "averageScore": 72,
+    "grade": "B"
+  },
+  {
+    "id": "STU013",
+    "name": "Charlotte Harris",
+    "class": "Class 3",
+    "quizHistory": [
+      {
+        "date": "2025-08-13",
+        "totalQuestions": 10,
+        "correctAnswers": 9,
+        "score": 90,
+        "timeSpent": 336,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-15",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 534,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-17",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 326,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 859,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 806,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 501,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 806,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 612,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 718,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      }
+    ],
+    "averageScore": 72,
+    "grade": "B"
+  },
+  {
+    "id": "STU008",
+    "name": "Mason Taylor",
+    "class": "Class 2",
+    "quizHistory": [
+      {
+        "date": "2025-08-13",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 838,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-15",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 626,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-17",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 306,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 9,
+        "score": 90,
+        "timeSpent": 568,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 757,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 806,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 777,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 867,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 563,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      }
+    ],
+    "averageScore": 71,
+    "grade": "B"
+  },
+  {
+    "id": "STU012",
+    "name": "James White",
+    "class": "Class 3",
+    "quizHistory": [
+      {
+        "date": "2025-08-11",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 346,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-13",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 669,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-15",
+        "totalQuestions": 10,
+        "correctAnswers": 9,
+        "score": 90,
+        "timeSpent": 378,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-17",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 840,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 494,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 328,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 493,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 531,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 706,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 896,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      }
+    ],
+    "averageScore": 68,
+    "grade": "C"
+  },
+  {
+    "id": "STU016",
+    "name": "Henry Walker",
+    "class": "Class 4",
+    "quizHistory": [
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 712,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 342,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 319,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 546,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 772,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 486,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      }
+    ],
+    "averageScore": 67,
+    "grade": "C"
+  },
+  {
+    "id": "STU002",
+    "name": "Olivia Smith",
+    "class": "Class 1",
+    "quizHistory": [
+      {
+        "date": "2025-08-13",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 742,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-15",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 488,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-17",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 658,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 425,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 594,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 716,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 9,
+        "score": 90,
+        "timeSpent": 714,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 851,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 328,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      }
+    ],
+    "averageScore": 66,
+    "grade": "C"
+  },
+  {
+    "id": "STU003",
+    "name": "Liam Johnson",
+    "class": "Class 1",
+    "quizHistory": [
+      {
+        "date": "2025-08-17",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 601,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 398,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 557,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 9,
+        "score": 90,
+        "timeSpent": 868,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 746,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 896,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 395,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      }
+    ],
+    "averageScore": 64,
+    "grade": "C"
+  },
+  {
+    "id": "STU017",
+    "name": "Harper Hall",
+    "class": "Class 4",
+    "quizHistory": [
+      {
+        "date": "2025-08-13",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 870,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-15",
+        "totalQuestions": 10,
+        "correctAnswers": 10,
+        "score": 100,
+        "timeSpent": 759,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-17",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 882,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 460,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 881,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 826,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 854,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 791,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 836,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "easy"
+      }
+    ],
+    "averageScore": 63,
+    "grade": "C"
+  },
+  {
+    "id": "STU006",
+    "name": "Noah Wilson",
+    "class": "Class 2",
+    "quizHistory": [
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 503,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 897,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 885,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 712,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 721,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      }
+    ],
+    "averageScore": 62,
+    "grade": "C"
+  },
+  {
+    "id": "STU019",
+    "name": "Grace King",
+    "class": "Class 4",
+    "quizHistory": [
+      {
+        "date": "2025-08-13",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 659,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-15",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 653,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-17",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 723,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 622,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 447,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 663,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 9,
+        "score": 90,
+        "timeSpent": 482,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 9,
+        "score": 90,
+        "timeSpent": 492,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 573,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      }
+    ],
+    "averageScore": 62,
+    "grade": "D"
+  },
+  {
+    "id": "STU004",
+    "name": "Sophia Brown",
+    "class": "Class 1",
+    "quizHistory": [
+      {
+        "date": "2025-08-11",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 729,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-13",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 414,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-15",
+        "totalQuestions": 10,
+        "correctAnswers": 9,
+        "score": 90,
+        "timeSpent": 760,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-17",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 696,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 411,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 593,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 9,
+        "score": 90,
+        "timeSpent": 513,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 350,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 474,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 601,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "easy"
+      }
+    ],
+    "averageScore": 61,
+    "grade": "D"
+  },
+  {
+    "id": "STU010",
+    "name": "Lucas Anderson",
+    "class": "Class 2",
+    "quizHistory": [
+      {
+        "date": "2025-08-15",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 377,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-17",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 842,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 468,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 9,
+        "score": 90,
+        "timeSpent": 311,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 846,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 643,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 522,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 521,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      }
+    ],
+    "averageScore": 59,
+    "grade": "D"
+  },
+  {
+    "id": "STU001",
+    "name": "Ethan Miller",
+    "class": "Class 1",
+    "quizHistory": [
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 505,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 655,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 801,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 685,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 357,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 9,
+        "score": 90,
+        "timeSpent": 617,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "hard"
+      }
+    ],
+    "averageScore": 52,
+    "grade": "D"
+  },
+  {
+    "id": "STU014",
+    "name": "Benjamin Martin",
+    "class": "Class 3",
+    "quizHistory": [
+      {
+        "date": "2025-08-15",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 516,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-17",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 686,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 434,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 481,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 5,
+        "score": 50,
+        "timeSpent": 488,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 633,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 670,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 6,
+        "score": 60,
+        "timeSpent": 387,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      }
+    ],
+    "averageScore": 51,
+    "grade": "D"
+  },
+  {
+    "id": "STU018",
+    "name": "Daniel Young",
+    "class": "Class 4",
+    "quizHistory": [
+      {
+        "date": "2025-08-17",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 720,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-19",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 354,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-21",
+        "totalQuestions": 10,
+        "correctAnswers": 7,
+        "score": 70,
+        "timeSpent": 562,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "easy"
+      },
+      {
+        "date": "2025-08-23",
+        "totalQuestions": 10,
+        "correctAnswers": 4,
+        "score": 40,
+        "timeSpent": 680,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          }
+        },
+        "difficulty": "medium"
+      },
+      {
+        "date": "2025-08-25",
+        "totalQuestions": 10,
+        "correctAnswers": 8,
+        "score": 80,
+        "timeSpent": 402,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 0,
+            "percentage": 0
+          },
+          "Science": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-27",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 353,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      },
+      {
+        "date": "2025-08-29",
+        "totalQuestions": 10,
+        "correctAnswers": 3,
+        "score": 30,
+        "timeSpent": 849,
+        "categoryScores": {
+          "History": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "World Geography": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Science": {
+            "total": 2,
+            "correct": 1,
+            "percentage": 50
+          },
+          "Arts & Culture": {
+            "total": 2,
+            "correct": 2,
+            "percentage": 100
+          }
+        },
+        "difficulty": "hard"
+      }
+    ],
+    "averageScore": 51,
+    "grade": "D"
+  }
+]

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="app-title">My Tasks</h1>
+            <!-- Dark mode toggle switch -->
+            <div class="theme-toggle">
+                <input type="checkbox" id="themeToggle" class="theme-checkbox" aria-label="Toggle dark mode">
+                <label for="themeToggle" class="theme-label">
+                    <span class="sun-icon" aria-hidden="true">☀️</span>
+                    <span class="moon-icon" aria-hidden="true">🌙</span>
+                    <span class="toggle-ball"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Quote of the day -->
+        <div class="quote-section" id="quoteSection">
+            <span class="quote-icon">💡</span>
+            <span class="quote-text" id="quoteText"></span>
+        </div>
+
+        <!-- Progress dashboard -->
+        <div class="progress-dashboard">
+            <div class="overall-progress">
+                <div class="progress-header">
+                    <span class="progress-title">Overall Progress</span>
+                    <span class="progress-text">
+                        <span id="progressCompleted">0</span>/<span id="progressTotal">0</span> done
+                        (<span id="progressPercent">0</span>%)
+                    </span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="mainProgressBar"></div>
+                </div>
+            </div>
+
+            <div class="category-progress">
+                <div class="category-progress-item work">
+                    <div class="category-progress-header">
+                        <span class="category-icon">💼</span>
+                        <span class="category-name">Work</span>
+                        <span class="category-count"><span id="workCompleted">0</span>/<span id="workTotal">0</span></span>
+                    </div>
+                    <div class="mini-progress-bar">
+                        <div class="mini-progress-fill" id="workProgress"></div>
+                    </div>
+                </div>
+
+                <div class="category-progress-item personal">
+                    <div class="category-progress-header">
+                        <span class="category-icon">🏠</span>
+                        <span class="category-name">Personal</span>
+                        <span class="category-count"><span id="personalCompleted">0</span>/<span id="personalTotal">0</span></span>
+                    </div>
+                    <div class="mini-progress-bar">
+                        <div class="mini-progress-fill" id="personalProgress"></div>
+                    </div>
+                </div>
+
+                <div class="category-progress-item study">
+                    <div class="category-progress-header">
+                        <span class="category-icon">📚</span>
+                        <span class="category-name">Study</span>
+                        <span class="category-count"><span id="studyCompleted">0</span>/<span id="studyTotal">0</span></span>
+                    </div>
+                    <div class="mini-progress-bar">
+                        <div class="mini-progress-fill" id="studyProgress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="today-stats">
+                <span class="today-icon">📅</span>
+                <span>Tasks added today: <strong id="todayCount">0</strong></span>
+            </div>
+        </div>
+
+        <!-- Search and tools section -->
+        <div class="tools-section">
+            <div class="search-sort-row">
+                <input
+                    type="text"
+                    id="searchInput"
+                    class="search-input"
+                    placeholder="🔍 Search tasks..."
+                    autocomplete="off"
+                    aria-label="Search tasks"
+                >
+                <select id="sortSelect" class="sort-select" aria-label="Sort options">
+                    <option value="newest">Newest first</option>
+                    <option value="oldest">Oldest first</option>
+                    <option value="category">By category</option>
+                    <option value="status">By completion</option>
+                    <option value="manual">Manual order</option>
+                </select>
+            </div>
+            <div class="action-buttons">
+                <button id="exportBtn" class="action-btn export-btn" title="Export data" aria-label="Export data">
+                    📥 Export
+                </button>
+                <label for="importFile" class="action-btn import-btn" title="Import data" aria-label="Import data">
+                    📤 Import
+                    <input type="file" id="importFile" accept=".json" style="display: none;">
+                </label>
+                <button id="undoBtn" class="action-btn undo-btn" disabled title="Undo" aria-label="Undo last delete">
+                    ↩️ Undo
+                </button>
+                <button id="clearCompleted" class="clear-completed-btn" aria-label="Delete all completed items">
+                    Clear Completed
+                    <span class="completed-badge" id="completedBadge">0</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Category filter buttons -->
+        <div class="filter-section" role="tablist" aria-label="Category filter">
+            <button class="filter-button active" data-filter="all" role="tab" aria-selected="true" aria-controls="taskContainer">All</button>
+            <button class="filter-button" data-filter="work" role="tab" aria-selected="false" aria-controls="taskContainer">Work</button>
+            <button class="filter-button" data-filter="personal" role="tab" aria-selected="false" aria-controls="taskContainer">Personal</button>
+            <button class="filter-button" data-filter="study" role="tab" aria-selected="false" aria-controls="taskContainer">Study</button>
+        </div>
+
+        <div class="input-section">
+            <input
+                type="text"
+                id="taskInput"
+                class="task-input"
+                placeholder="Enter a task..."
+                autocomplete="off"
+                aria-label="New task input"
+                aria-describedby="inputHelp"
+            >
+            <select id="categorySelect" class="category-select" aria-label="Select category">
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="study">Study</option>
+            </select>
+            <button id="addButton" class="add-button" aria-label="Add task">Add</button>
+            <span id="inputHelp" class="visually-hidden">Type a task and press Enter or click the Add button</span>
+        </div>
+
+        <div id="taskContainer" class="task-container" role="tabpanel" aria-live="polite" aria-label="Task list">
+            <!-- Task list is dynamically added here -->
+        </div>
+
+        <!-- Motivational message -->
+        <div class="motivation-message" id="motivationMessage" style="display: none;"></div>
+    </div>
+
+    <!-- Keyboard shortcuts hint -->
+    <div class="shortcuts-hint" aria-label="Keyboard shortcuts guide">
+        <span title="Alt+N: New task | Alt+1-4: Filters | Alt+D: Dark mode | Alt+S: Search | Alt+Z: Undo">⌨️ Shortcuts</span>
+    </div>
+
+    <!-- Sortable.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

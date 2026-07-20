@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI analyzes your fridge ingredients and recommends personalized recipes.">
+    <title>FridgeChef - AI Recipe Recommendations</title>
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧊</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-top">
+                <div class="header-title-group">
+                    <h1 class="app-title">
+                        <span class="title-icon">🧊</span>
+                        FridgeChef
+                    </h1>
+                    <p class="app-subtitle">Personalized recipes recommended by AI</p>
+                </div>
+                <button id="settingsBtn" class="btn-settings" aria-label="Settings" title="API Key Settings">
+                    ⚙️
+                </button>
+            </div>
+        </header>
+
+        <!-- API Key Settings Modal -->
+        <div id="settingsModal" class="modal hidden" role="dialog" aria-labelledby="settings-title" aria-modal="true">
+            <div class="modal-content settings-modal">
+                <div class="modal-header">
+                    <h3 id="settings-title" class="modal-title">⚙️ API Key Settings</h3>
+                    <button id="closeSettingsBtn" class="btn-close" aria-label="Close">✕</button>
+                </div>
+                <div class="modal-body">
+                    <div class="settings-info">
+                        <p>ℹ️ This app manages the API on the server, so no separate API key setup is required.</p>
+                        <p class="settings-help-secondary">
+                            💡 For local development or to use your own API key, enter it below.
+                        </p>
+                    </div>
+                    <div class="form-group">
+                        <label for="apiKeyInput" class="form-label">API Key</label>
+                        <input
+                            type="password"
+                            id="apiKeyInput"
+                            class="form-input"
+                            placeholder="sk-or-v1-..."
+                            aria-describedby="api-key-help"
+                        />
+                        <small id="api-key-help" class="form-help">
+                            Your API key is stored only in your browser and is never sent anywhere else.
+                        </small>
+                    </div>
+                    <div id="apiKeyStatus" class="api-status hidden"></div>
+                </div>
+                <div class="modal-actions">
+                    <button id="saveApiKeyBtn" class="btn btn-primary">
+                        <span class="btn-icon">💾</span>
+                        Save
+                    </button>
+                    <button id="cancelSettingsBtn" class="btn btn-secondary">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+            <div class="modal-backdrop"></div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Image Upload Section -->
+            <section class="upload-section">
+                <div class="upload-container">
+                    <div class="upload-header">
+                        <h2 class="section-title">
+                            <span class="section-icon">📸</span>
+                            Upload a Fridge Photo
+                        </h2>
+                        <p class="section-description">Upload a photo of your fridge or enter ingredients directly</p>
+                    </div>
+
+                    <div class="upload-area" id="uploadArea">
+                        <input type="file" id="imageInput" accept="image/*" hidden>
+                        <div class="upload-placeholder">
+                            <span class="upload-icon">📷</span>
+                            <p class="upload-text">Select or drag a photo here</p>
+                            <button class="btn btn-primary" id="selectImageBtn">
+                                Select Photo
+                            </button>
+                            <div class="sample-divider">or</div>
+                            <p class="sample-text">Click the sample image below to get started</p>
+                            <div class="sample-images">
+                                <button class="sample-image-btn" data-sample="sample2.jpg" aria-label="Sample fridge">
+                                    <img src="samples/sample2.jpg" alt="Sample fridge">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="image-preview hidden" id="imagePreview">
+                            <img id="previewImage" alt="Fridge photo">
+                            <button class="btn-remove" id="removeImageBtn" aria-label="Remove photo">✕</button>
+                        </div>
+                    </div>
+
+                    <!-- Ingredients recognized from the image -->
+                    <div id="recognizedIngredientsSection" class="recognized-section hidden">
+                        <div class="recognized-header">
+                            <h3 class="recognized-title">
+                                <span class="recognized-icon">🔍</span>
+                                Recognized Ingredients
+                            </h3>
+                        </div>
+                        <div id="recognizedIngredientsContent" class="recognized-content">
+                            <!-- Recognized ingredients are displayed here -->
+                        </div>
+                        <div class="recognized-actions">
+                            <button id="analyzeImageBtn" class="btn btn-primary">
+                                <span class="btn-icon">🔍</span>
+                                Analyze Ingredients
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="ingredients-input">
+                        <label for="ingredientsText" class="input-label">
+                            <span class="label-icon">🥬</span>
+                            Enter Ingredients Directly (or add extra ingredients)
+                        </label>
+                        <textarea
+                            id="ingredientsText"
+                            class="ingredients-textarea"
+                            placeholder="e.g., eggs, milk, tomatoes, onions, cheese..."
+                            rows="3"
+                        ></textarea>
+                    </div>
+
+                    <button id="generateRecipeBtn" class="btn btn-generate" disabled>
+                        <span class="btn-icon">🍳</span>
+                        Get Recipe Recommendations
+                    </button>
+                </div>
+            </section>
+
+            <!-- Loading Section -->
+            <div id="loadingSection" class="loading-section hidden">
+                <div class="loading-spinner"></div>
+                <p class="loading-text">Finding a delicious recipe...</p>
+            </div>
+
+            <!-- Recipe Result Section -->
+            <section id="recipeResult" class="recipe-result hidden">
+                <div class="result-container">
+                    <h2 class="result-title">
+                        <span class="result-icon">👨‍🍳</span>
+                        Recommended Recipe
+                    </h2>
+
+                    <div id="recipeContent" class="recipe-content">
+                        <!-- Recipe will be inserted here -->
+                    </div>
+
+                    <div class="result-actions">
+                        <button id="newSearchBtn" class="btn btn-primary">
+                            <span class="btn-icon">🔄</span>
+                            New Search
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-text">Enjoy a happy day with delicious cooking! 🍽️</p>
+            <div style="margin-top: 20px; padding: 20px; background: rgba(255, 255, 255, 0.95); border-radius: 10px; border: 2px solid rgba(255, 255, 255, 0.3);">
+                <p style="margin: 0 0 12px 0; text-align: center; font-size: 0.9em; color: #333; line-height: 1.6;">
+                    💡 Built by combining the AI recipe recommendation app from <strong>Chapter 6</strong><br>
+                    with the <strong>Vercel deployment guide from Chapter 8</strong>.
+                </p>
+                <div style="text-align: center; margin-top: 15px;">
+                    <a href="https://github.com/taehojo/vibecoding-eng" target="_blank" style="display: inline-block; padding: 10px 20px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+                        📚 Back to GitHub Repository
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Success Toast -->
+    <div id="successToast" class="toast hidden">
+        <span class="toast-icon">✅</span>
+        <span class="toast-message"></span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="backend.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
