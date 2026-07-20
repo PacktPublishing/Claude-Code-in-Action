@@ -1,5 +1,5 @@
 # Step 1 Requirements
-streamlit==1.29.0
+streamlit==1.54.0
 python-dotenv==1.0.0
 requests==2.31.0
 Pillow==10.1.0
