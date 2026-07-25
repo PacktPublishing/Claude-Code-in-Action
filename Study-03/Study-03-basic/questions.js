@@ -1,4 +1,13 @@
 const quizQuestions = [
+    {
+        id: 12,
+        category: "World Geography",
+        difficulty: "medium",
+        question: "What is the longest river in the world?",
+        options: ["Amazon River", "Nile River", "Yangtze River", "Mississippi River"],
+        correctAnswer: 1,
+        explanation: "The Nile River is about 6,650 km long, making it the longest river in the world."
+    },
     // History (13 questions)
     {
         id: 1,
@@ -136,15 +145,6 @@ const quizQuestions = [
         options: ["Africa", "Asia", "North America", "Antarctica"],
         correctAnswer: 1,
         explanation: "Asia is the largest continent in the world, covering about 44,579,000 km²."
-    },
-    {
-        id: 12,
-        category: "World Geography",
-        difficulty: "medium",
-        question: "What is the longest river in the world?",
-        options: ["Amazon River", "Nile River", "Yangtze River", "Mississippi River"],
-        correctAnswer: 1,
-        explanation: "The Nile River is about 6,650 km long, making it the longest river in the world."
     },
     {
         id: 13,
