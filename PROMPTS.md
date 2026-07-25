@@ -345,7 +345,7 @@ Please analyze the files in the @web_version folder and check if the to-do app i
 I want to build a trivia quiz game. Write a PRD.
 Game rules:
 - Four-option multiple choice quiz
-- Categories: Korean History, Science, Geography, Arts & Culture
+- Categories: History, Science, Geography, Arts & Culture
 - 10 questions per category, 40 questions total
 - Instant feedback on correct/incorrect answers
 - Final score and ranking records
@@ -370,12 +370,12 @@ Scope
 javascript// Example question data structure
 {
   id: 1,
-  category: "Korean History",
+  category: "History",
   difficulty: "medium",
-  question: "Which king founded the Joseon dynasty?",
-  options: ["Yi Seong-gye", "Wang Geon", "Yi Bang-won", "Sejong"],
+  question: "Who founded the Mongol Empire?",
+  options: ["Genghis Khan", "Kublai Khan", "Ogedei Khan", "Tamerlane"],
   correctAnswer: 0,
-  explanation: "Yi Seong-gye founded the Joseon dynasty in 1392."
+  explanation: "Genghis Khan united the Mongol tribes and founded the Mongol Empire in 1206."
 }
 
 Hardcode 10 questions per category (40 total)
@@ -453,7 +453,7 @@ javascript// Result data structure
   totalQuestions: 40,
   accuracy: 80,
   categoryStats: {
-    "Korean History": { correct: 8, total: 10 },
+    "History": { correct: 8, total: 10 },
     "Science": { correct: 7, total: 10 },
     // ...
   },
@@ -500,7 +500,7 @@ const leaderboard = {
   weekly: [],
   allTime: [],
   byCategory: {
-    "Korean History": [],
+    "History": [],
     "Science": [],
     // ...
   }
