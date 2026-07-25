@@ -69,4 +69,5 @@ tmp/
 
 # Local only
 /CLAUDE.md
-.claude/
+**/.claude/settings.json
+**/.claude/settings.local.json

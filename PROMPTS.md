@@ -612,6 +612,10 @@ It should manage the ranking system.
 ```
 
 ```
+Use /quiz-check to verify all questions, /quiz-stats to analyze statistics, and /quiz-leaderboard to update the leaderboard, all in a single request.
+```
+
+```
 Create .claude/commands/quiz-daily.md and make it perform the following tasks in order.
 1. Read and understand the structure of the file containing the quiz questions
 2. Check the current question count and distribution
