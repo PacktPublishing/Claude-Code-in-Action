@@ -171,7 +171,7 @@ Direct file editing, terminal, and Git integration included.
   - Custom commands Claude Code creates on its own
   - Building an efficient maintenance workflow
 
-> **Example**: Trivia quiz game [🎯 Live demo](https://vibecoding-eng-ch05.vercel.app) — four-option multiple choice, category modes, scoring system, leaderboard (with hallucination verification guidelines and custom command automation)
+> **Example**: General knowledge quiz game [🎯 Live demo](https://vibecoding-eng-ch05.vercel.app) — four-option multiple choice, category modes, scoring system, leaderboard (with hallucination verification guidelines and custom command automation)
 
 **Chapter 6: Giving Claude Code Wings with APIs** [📝 Prompts](https://github.com/PacktPublishing/Claude-Code-in-Action/blob/main/PROMPTS.md#chapter-6-giving-claude-code-wings-with-apis)
 - 06-1 Setting Up APIs in Claude Code
@@ -229,8 +229,8 @@ The hands-on projects for each chapter are stored in the following folders.
 |:---:|:---:|:---|:---:|
 | 3 | `Study-01` | Handwriting recognition program | [🎯 Live demo](https://vibecoding-eng-ch03.vercel.app) |
 | 4 | `Study-02` | Todo app | [🎯 Live demo](https://vibecoding-eng-ch04.vercel.app) |
-| 5 | `Study-03-basic` | Trivia quiz game (basic) | [📥 Download](https://download-directory.github.io/?url=https://github.com/PacktPublishing/Claude-Code-in-Action/tree/main/Study-03/Study-03-basic) |
-| 5 | `Study-03-advanced` | Trivia quiz game (advanced) | [🎯 Live demo](https://vibecoding-eng-ch05.vercel.app) |
+| 5 | `Study-03-basic` | General knowledge quiz game (basic) | [📥 Download](https://download-directory.github.io/?url=https://github.com/PacktPublishing/Claude-Code-in-Action/tree/main/Study-03/Study-03-basic) |
+| 5 | `Study-03-advanced` | General knowledge quiz game (advanced) | [🎯 Live demo](https://vibecoding-eng-ch05.vercel.app) |
 | 6 | `Study-04` | FridgeChef (AI recipe recommendations) | [🎯 Live demo](https://vibecoding-eng-ch06.vercel.app) |
 | 7 | `Study-05` | AI Empathy Diary | [🎯 Live demo](https://vibecoding-eng-ch07.vercel.app) |
 | 7 | `Study-05` | PDF Summarizer AI | [🎯 Live demo](https://vibecoding-eng-ch07.vercel.app/pdf) |

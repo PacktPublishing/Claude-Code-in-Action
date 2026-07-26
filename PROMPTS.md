@@ -342,7 +342,7 @@ Please analyze the files in the @web_version folder and check if the to-do app i
 #### 05-1 Creating AI Content Without Hallucinations
 
 ```
-I want to build a trivia quiz game. Write a PRD.
+I want to build a general knowledge quiz game. Write a PRD.
 Game rules:
 - Four-option multiple choice quiz
 - Categories: History, Science, Geography, Arts & Culture
@@ -352,7 +352,7 @@ Game rules:
 ```
 
 ```
-Based on the PRD, organize the trivia quiz game into 3 step-by-step prompts I can implement with Claude Code.
+Based on the PRD, organize the general knowledge quiz game into 3 step-by-step prompts I can implement with Claude Code.
 ```
 
 #### Step 1: Core Quiz System
