@@ -544,18 +544,18 @@ Test checklist
 #### Quiz Verification and Improvement
 
 ```
-Quiz question cross-verification guidelines
-Check the following whenever writing a question
+Quiz Question Validation Guidelines
+Checklist for every question you write
 1. Is there exactly one correct answer?
 - If other interpretations are possible, state the criteria (e.g., by area, as of 2024)
-2. Do superlatives come with a stated standard?
-- Expressions like 'largest' or 'first' must state the measurement standard
+2. Do superlative expressions have a stated basis?
+- Specify the measurement basis for "largest," "first," etc.
 3. Are the time frame and scope clear?
 - State the point in time for information that can change
-- Limit the geographic or categorical scope
-4. Has it been cross-verified?
-- Confirm questionable information against 2 or more sources
-- For contested topics, follow the mainstream scholarly view
+- Limit the geographic and categorical scope
+4. Has it been verified?
+- Check at least two sources for questionable information
+- For contested topics, follow mainstream scholarship
 ```
 
 ```
