@@ -1,5 +1,5 @@
 const quizQuestions = [
-    // History (13 questions)
+    // History (10 questions)
     {
         id: 1,
         category: "History",
@@ -90,43 +90,6 @@ const quizQuestions = [
         correctAnswer: 1,
         explanation: "The University of Bologna, founded in 1088, is the oldest university in Europe."
     },
-    {
-        id: 41,
-        category: "History",
-        difficulty: "medium",
-        question: "What was the chief governing council of ancient Rome?",
-        options: ["The Senate", "The Forum", "The Assembly", "The Tribunal"],
-        correctAnswer: 0,
-        explanation: "The Senate was the chief governing and advisory council of ancient Rome."
-    },
-    {
-        id: 42,
-        category: "History",
-        difficulty: "hard",
-        question: "Which economist wrote 'The Wealth of Nations'?",
-        options: ["David Ricardo", "Adam Smith", "John Locke", "Thomas Malthus"],
-        correctAnswer: 1,
-        explanation: "Adam Smith published 'The Wealth of Nations' in 1776, laying the foundations of modern economics."
-    },
-    {
-        id: 43,
-        category: "History",
-        difficulty: "hard",
-        question: "In which city was the League of Nations headquartered?",
-        options: ["Brussels", "The Hague", "Vienna", "Geneva"],
-        correctAnswer: 3,
-        explanation: "The League of Nations was headquartered in Geneva, Switzerland, from its founding in 1920. It was later succeeded by the United Nations."
-    },
-    {
-        id: 44,
-        category: "History",
-        difficulty: "hard",
-        question: "Which of the following was NOT one of the Allied 'Big Three' leaders of World War II?",
-        options: ["Winston Churchill", "Franklin D. Roosevelt", "Joseph Stalin", "Charles de Gaulle"],
-        correctAnswer: 3,
-        explanation: "The 'Big Three' were Churchill, Roosevelt, and Stalin. Charles de Gaulle led the Free French forces but was not part of the Big Three conferences."
-    },
-
     // World Geography (10 questions)
     {
         id: 11,
@@ -402,43 +365,8 @@ const quizQuestions = [
         correctAnswer: 0,
         explanation: "Miguel de Cervantes published Don Quixote in 1605 and 1615."
     }
-,
-    {
-        id: 45,
-        category: "History",
-        difficulty: "hard",
-        question: "Which of these historical events happened last?",
-        options: ["Fall of Constantinople","Columbus reaching the Americas","Gutenberg's printing press","End of the Hundred Years' War"],
-        correctAnswer: 1,
-        explanation: "Columbus reached the Americas in 1492, after the printing press (c. 1440), the end of the Hundred Years' War (1453), and the fall of Constantinople (1453)."
-    },
-    {
-        id: 46,
-        category: "World Geography",
-        difficulty: "medium",
-        question: "Which is the largest country in Africa by area? (as of 2024)",
-        options: ["Nigeria","South Africa","Algeria","Egypt"],
-        correctAnswer: 2,
-        explanation: "Algeria is the largest country in Africa, at about 2.38 million km²."
-    },
-    {
-        id: 47,
-        category: "Science",
-        difficulty: "easy",
-        question: "Which gas is required for photosynthesis?",
-        options: ["Oxygen","Carbon dioxide","Nitrogen","Hydrogen"],
-        correctAnswer: 1,
-        explanation: "Plants perform photosynthesis using carbon dioxide, water, and light."
-    },
-    {
-        id: 48,
-        category: "Arts & Culture",
-        difficulty: "medium",
-        question: "In which city is Leonardo da Vinci's 'The Last Supper' located?",
-        options: ["Rome","Florence","Milan","Venice"],
-        correctAnswer: 2,
-        explanation: "The Last Supper is in the Convent of Santa Maria delle Grazie in Milan."
-    }];
+
+];
 if (typeof module !== 'undefined') {
     module.exports = quizQuestions;
 }
