@@ -9,10 +9,25 @@ class TeacherReportGenerator {
         this.reportName = 'teacher_report.html';
         this.gradeColors = {
             'A': '#5F7F6D',
-            'B': '#5C7A99', 
+            'B': '#5C7A99',
             'C': '#B99755',
             'D': '#A96A5B'
         };
+        this.assignGrades();
+    }
+
+    // Relative ranking: A = top 20%, B = 21-40%, C = 41-70%, D = bottom 30%
+    assignGrades() {
+        const ranked = this.students.slice().sort((a, b) =>
+            (b.averageScore || b.totalScore || 0) - (a.averageScore || a.totalScore || 0));
+        const total = ranked.length;
+        ranked.forEach((student, index) => {
+            const percentile = (index + 1) / total * 100;
+            if (percentile <= 20) student.grade = 'A';
+            else if (percentile <= 40) student.grade = 'B';
+            else if (percentile <= 70) student.grade = 'C';
+            else student.grade = 'D';
+        });
     }
 
     calculateStatistics() {
@@ -384,9 +399,21 @@ class TeacherReportGenerator {
             }
         }
 
+        /* Student score table */
+        .score-section { background: #ffffff; border: 1px solid #e3e8ee; border-radius: 15px; padding: 16px 20px; }
+        .score-section h2 { color: #26303e; font-size: 1.05em; margin-bottom: 12px; }
+        .score-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+        .score-table { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+        .score-table th { text-align: left; color: #8a94a3; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em; padding: 6px 8px; border-bottom: 2px solid #dfe4ea; }
+        .score-table td { padding: 6px 8px; border-bottom: 1px solid #eef1f5; color: #374151; }
+        .score-table td.num { color: #8a94a3; width: 34px; }
+        .score-table td.pts { font-weight: 600; color: #26303e; width: 70px; }
+        .grade-badge { display: inline-block; min-width: 26px; text-align: center; padding: 2px 8px; border-radius: 4px; color: #ffffff; font-weight: 600; font-size: 0.9em; }
+
         /* Compact landscape layout */
         .container { max-width: 1680px; }
-        .content { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; grid-template-areas: "stats stats" "chart students" "category recs"; }
+        .content { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; grid-template-areas: "stats stats" "chart students" "scores scores" "category recs"; }
+        .score-section { grid-area: scores; }
         .stats-grid { grid-area: stats; grid-template-columns: repeat(6, 1fr); margin-bottom: 0; }
         .chart-container { grid-area: chart; margin-bottom: 0; }
         .students-section { grid-area: students; margin-bottom: 0; }
@@ -508,6 +535,30 @@ class TeacherReportGenerator {
                 </div>
             </div>
             
+            <div class="score-section">
+                <h2>Student Scores</h2>
+                <div class="score-columns">
+                    ${(() => {
+                        const ranked = this.students.slice().sort((a, b) =>
+                            (b.averageScore || b.totalScore || 0) - (a.averageScore || a.totalScore || 0));
+                        const half = Math.ceil(ranked.length / 2);
+                        const renderRows = (list, offset) => list.map((student, i) => `
+                        <tr>
+                            <td class="num">${offset + i + 1}</td>
+                            <td>${student.name || student.studentName || 'Unknown'}</td>
+                            <td class="pts">${student.averageScore || student.totalScore || 0} pts</td>
+                            <td><span class="grade-badge" style="background: ${this.gradeColors[student.grade]};">${student.grade}</span></td>
+                        </tr>`).join('');
+                        const table = rows => `
+                        <table class="score-table">
+                            <thead><tr><th>#</th><th>Name</th><th>Score</th><th>Grade</th></tr></thead>
+                            <tbody>${rows}</tbody>
+                        </table>`;
+                        return table(renderRows(ranked.slice(0, half), 0)) + table(renderRows(ranked.slice(half), half));
+                    })()}
+                </div>
+            </div>
+
             <div class="category-chart">
                 <h2>Average Score by Subject</h2>
                 <div class="category-bars">

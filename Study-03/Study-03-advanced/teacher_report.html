@@ -294,9 +294,21 @@
             }
         }
 
+        /* Student score table */
+        .score-section { background: #ffffff; border: 1px solid #e3e8ee; border-radius: 15px; padding: 16px 20px; }
+        .score-section h2 { color: #26303e; font-size: 1.05em; margin-bottom: 12px; }
+        .score-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
+        .score-table { width: 100%; border-collapse: collapse; font-size: 0.92em; }
+        .score-table th { text-align: left; color: #8a94a3; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.85em; padding: 6px 8px; border-bottom: 2px solid #dfe4ea; }
+        .score-table td { padding: 6px 8px; border-bottom: 1px solid #eef1f5; color: #374151; }
+        .score-table td.num { color: #8a94a3; width: 34px; }
+        .score-table td.pts { font-weight: 600; color: #26303e; width: 70px; }
+        .grade-badge { display: inline-block; min-width: 26px; text-align: center; padding: 2px 8px; border-radius: 4px; color: #ffffff; font-weight: 600; font-size: 0.9em; }
+
         /* Compact landscape layout */
         .container { max-width: 1680px; }
-        .content { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; grid-template-areas: "stats stats" "chart students" "category recs"; }
+        .content { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; grid-template-areas: "stats stats" "chart students" "scores scores" "category recs"; }
+        .score-section { grid-area: scores; }
         .stats-grid { grid-area: stats; grid-template-columns: repeat(6, 1fr); margin-bottom: 0; }
         .chart-container { grid-area: chart; margin-bottom: 0; }
         .students-section { grid-area: students; margin-bottom: 0; }
@@ -427,7 +439,7 @@
 
                 <div class="student-list needs-help">
                     <h3>Needs Improvement (below 70)</h3>
-
+                    
                         <div class="student-item">
                             <span class="student-name">Benjamin Martin</span>
                             <span class="student-score">51 pts</span>
@@ -451,10 +463,145 @@
                 </div>
             </div>
             
+            <div class="score-section">
+                <h2>Student Scores</h2>
+                <div class="score-columns">
+                    
+                        <table class="score-table">
+                            <thead><tr><th>#</th><th>Name</th><th>Score</th><th>Grade</th></tr></thead>
+                            <tbody>
+                        <tr>
+                            <td class="num">1</td>
+                            <td>Isabella Clark</td>
+                            <td class="pts">78 pts</td>
+                            <td><span class="grade-badge" style="background: #5F7F6D;">A</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">2</td>
+                            <td>Emma Davis</td>
+                            <td class="pts">76 pts</td>
+                            <td><span class="grade-badge" style="background: #5F7F6D;">A</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">3</td>
+                            <td>Chloe Wright</td>
+                            <td class="pts">76 pts</td>
+                            <td><span class="grade-badge" style="background: #5F7F6D;">A</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">4</td>
+                            <td>Amelia Lewis</td>
+                            <td class="pts">75 pts</td>
+                            <td><span class="grade-badge" style="background: #5F7F6D;">A</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">5</td>
+                            <td>Ava Moore</td>
+                            <td class="pts">73 pts</td>
+                            <td><span class="grade-badge" style="background: #5C7A99;">B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">6</td>
+                            <td>Mia Thomas</td>
+                            <td class="pts">72 pts</td>
+                            <td><span class="grade-badge" style="background: #5C7A99;">B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">7</td>
+                            <td>Charlotte Harris</td>
+                            <td class="pts">72 pts</td>
+                            <td><span class="grade-badge" style="background: #5C7A99;">B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">8</td>
+                            <td>Mason Taylor</td>
+                            <td class="pts">71 pts</td>
+                            <td><span class="grade-badge" style="background: #5C7A99;">B</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">9</td>
+                            <td>James White</td>
+                            <td class="pts">68 pts</td>
+                            <td><span class="grade-badge" style="background: #B99755;">C</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">10</td>
+                            <td>Henry Walker</td>
+                            <td class="pts">67 pts</td>
+                            <td><span class="grade-badge" style="background: #B99755;">C</span></td>
+                        </tr></tbody>
+                        </table>
+                        <table class="score-table">
+                            <thead><tr><th>#</th><th>Name</th><th>Score</th><th>Grade</th></tr></thead>
+                            <tbody>
+                        <tr>
+                            <td class="num">11</td>
+                            <td>Olivia Smith</td>
+                            <td class="pts">66 pts</td>
+                            <td><span class="grade-badge" style="background: #B99755;">C</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">12</td>
+                            <td>Liam Johnson</td>
+                            <td class="pts">64 pts</td>
+                            <td><span class="grade-badge" style="background: #B99755;">C</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">13</td>
+                            <td>Harper Hall</td>
+                            <td class="pts">63 pts</td>
+                            <td><span class="grade-badge" style="background: #B99755;">C</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">14</td>
+                            <td>Noah Wilson</td>
+                            <td class="pts">62 pts</td>
+                            <td><span class="grade-badge" style="background: #B99755;">C</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">15</td>
+                            <td>Grace King</td>
+                            <td class="pts">62 pts</td>
+                            <td><span class="grade-badge" style="background: #A96A5B;">D</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">16</td>
+                            <td>Sophia Brown</td>
+                            <td class="pts">61 pts</td>
+                            <td><span class="grade-badge" style="background: #A96A5B;">D</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">17</td>
+                            <td>Lucas Anderson</td>
+                            <td class="pts">59 pts</td>
+                            <td><span class="grade-badge" style="background: #A96A5B;">D</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">18</td>
+                            <td>Ethan Miller</td>
+                            <td class="pts">52 pts</td>
+                            <td><span class="grade-badge" style="background: #A96A5B;">D</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">19</td>
+                            <td>Benjamin Martin</td>
+                            <td class="pts">51 pts</td>
+                            <td><span class="grade-badge" style="background: #A96A5B;">D</span></td>
+                        </tr>
+                        <tr>
+                            <td class="num">20</td>
+                            <td>Daniel Young</td>
+                            <td class="pts">51 pts</td>
+                            <td><span class="grade-badge" style="background: #A96A5B;">D</span></td>
+                        </tr></tbody>
+                        </table>
+                </div>
+            </div>
+
             <div class="category-chart">
                 <h2>Average Score by Subject</h2>
                 <div class="category-bars">
-
+                    
                     <div class="category-item">
                         <div class="category-label">
                             <span>History</span>
@@ -501,7 +648,7 @@
             <div class="recommendations">
                 <h2>Summary Analysis and Recommendations</h2>
                 <ul>
-                    <li>Overall achievement needs improvement. Increase time spent reviewing fundamental concepts.</li><li>Focused instruction is needed in: History, World Geography, Science, Arts & Culture.</li><li>Check learning progress with regular formative assessments.</li><li>Strengthen communication with parents to encourage learning at home.</li>
+                    <li>Overall achievement needs improvement. Increase time spent reviewing fundamental concepts.</li><li>Focused instruction is needed in: History, World Geography, Science, Arts & Culture.</li><li>Consider running an enrichment program for top-performing students.</li><li>Check learning progress with regular formative assessments.</li><li>Strengthen communication with parents to encourage learning at home.</li>
                 </ul>
             </div>
         </div>
