@@ -67,8 +67,8 @@ class TeacherDashboard {
         const files = [
             { name: 'student_data.json', required: true },
             { name: 'teacher_report.html', required: true },
-            { name: `report_summary_${today}.csv`, required: false },
-            { name: `report_detailed_${today}.csv`, required: false }
+            { name: 'report_summary.csv', required: false },
+            { name: 'report_detailed.csv', required: false }
         ];
 
         const fileStatuses = [];

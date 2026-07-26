@@ -14,12 +14,12 @@ node export-report.js
 - Excel-compatible UTF-8 BOM encoding
 
 ## Generated Files
-1. **Summary CSV** (`report_summary_YYYY-MM-DD.csv`)
+1. **Summary CSV** (`report_summary.csv`)
    - Overall statistics
    - Top 5 student info
    - Grading criteria description
 
-2. **Detailed CSV** (`report_detailed_YYYY-MM-DD.csv`)
+2. **Detailed CSV** (`report_detailed.csv`)
    - Full student list
    - Average score per student
    - Relative-ranking grade

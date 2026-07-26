@@ -53,8 +53,8 @@ node teacher-dashboard.js
 ## Generated Files
 - `student_data.json` - Student database
 - `teacher_report.html` - HTML report
-- `report_summary_YYYY-MM-DD.csv` - Summary CSV
-- `report_detailed_YYYY-MM-DD.csv` - Detailed CSV
+- `report_summary.csv` - Summary CSV
+- `report_detailed.csv` - Detailed CSV
 
 ## Use Cases
 - Daily/weekly grade management

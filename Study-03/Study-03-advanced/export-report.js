@@ -114,7 +114,7 @@ const createDetailedCSV = () => {
 
 // Save the CSV file
 const csvContent = createCSV(data);
-const csvPath = path.join(process.cwd(), `report_summary_${new Date().toISOString().split('T')[0]}.csv`);
+const csvPath = path.join(process.cwd(), 'report_summary.csv');
 fs.writeFileSync(csvPath, '\ufeff' + csvContent); // Add BOM (Excel compatibility)
 
 console.log(`✅ Summary CSV saved: ${csvPath}`);
@@ -122,7 +122,7 @@ console.log(`✅ Summary CSV saved: ${csvPath}`);
 // Also create the detailed CSV
 const detailedCSV = createDetailedCSV();
 if (detailedCSV) {
-    const detailPath = path.join(process.cwd(), `report_detailed_${new Date().toISOString().split('T')[0]}.csv`);
+    const detailPath = path.join(process.cwd(), 'report_detailed.csv');
     fs.writeFileSync(detailPath, '\ufeff' + detailedCSV);
     console.log(`✅ Detailed CSV saved: ${detailPath}`);
 }
