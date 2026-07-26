@@ -8,10 +8,10 @@ class TeacherReportGenerator {
         this.reportDate = new Date().toISOString().split('T')[0];
         this.reportName = `teacher_report_${this.reportDate}.html`;
         this.gradeColors = {
-            'A': '#27ae60',
-            'B': '#3498db', 
-            'C': '#f39c12',
-            'D': '#e74c3c'
+            'A': '#5F7F6D',
+            'B': '#5C7A99', 
+            'C': '#B99755',
+            'D': '#A96A5B'
         };
     }
 
@@ -27,7 +27,7 @@ class TeacherReportGenerator {
             stdDev: this.calculateStdDev(scores).toFixed(1),
             gradeDistribution: this.getGradeDistribution(),
             categoryAvgs: this.getCategoryAverages(),
-            topPerformers: students.filter(s => (s.averageScore || s.totalScore || 0) >= 90).sort((a, b) => (b.averageScore || b.totalScore || 0) - (a.averageScore || a.totalScore || 0)).slice(0, 5),
+            topPerformers: students.slice().sort((a, b) => (b.averageScore || b.totalScore || 0) - (a.averageScore || a.totalScore || 0)).slice(0, 5),
             needsImprovement: students.filter(s => (s.averageScore || s.totalScore || 0) < 70).sort((a, b) => (a.averageScore || a.totalScore || 0) - (b.averageScore || b.totalScore || 0)).slice(0, 5)
         };
     }
@@ -243,11 +243,11 @@ class TeacherReportGenerator {
         }
         
         .student-list.top h3 {
-            color: #27ae60;
+            color: #5F7F6D;
         }
         
         .student-list.needs-help h3 {
-            color: #e74c3c;
+            color: #A96A5B;
         }
         
         .student-item {
@@ -405,13 +405,37 @@ class TeacherReportGenerator {
         .stat-card .value { font-size: 1.6em; }
         .recommendations li { padding: 8px 0 8px 24px; }
         .category-item { margin-bottom: 10px; }
+
+        /* Professional muted theme */
+        body { background: #edf0f4; }
+        .header { background: #26303e; }
+        .header h1 { font-weight: 600; letter-spacing: 0.3px; }
+        .header .date { color: #aeb7c4; }
+        .stat-card { background: #ffffff; border: 1px solid #e3e8ee; box-shadow: none; }
+        .stat-card .value { color: #26303e; }
+        .stat-card .label { color: #8a94a3; }
+        .chart-container, .category-chart, .students-section > div { background: #ffffff; border: 1px solid #e3e8ee; box-shadow: none; }
+        .chart-container h2, .category-chart h2 { color: #26303e; }
+        .grade-bars { border-bottom: 2px solid #dfe4ea; height: 190px; margin-bottom: 34px; padding: 0 10px; }
+        .grade-bar { background: var(--color); border-radius: 4px 4px 0 0; width: 16%; }
+        .grade-bar:hover { transform: none; }
+        .grade-bar .count { top: -32px; font-weight: 600; font-size: 0.9em; color: #4b5563; white-space: nowrap; }
+        .grade-bar .label { bottom: -28px; font-size: 0.95em; font-weight: 600; color: #374151; white-space: nowrap; }
+        .student-list h3 { color: #26303e; }
+        .student-item { background: #f6f8fa; }
+        .student-score { background: #e7ecf3; color: #33475b; }
+        .category-bar-fill { background: #5C7A99; }
+        .recommendations { background: #ffffff; border: 1px solid #e3e8ee; border-left: 4px solid #5C7A99; }
+        .recommendations h2 { color: #26303e; }
+        .recommendations li { color: #4b5563; }
+        .recommendations li::before { color: #5C7A99; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🎓 Class Grade Report</h1>
-            <div class="date">📅 ${this.reportDate}</div>
+            <h1>Class Grade Report</h1>
+            <div class="date">${this.reportDate}</div>
         </div>
         
         <div class="content">
@@ -437,13 +461,13 @@ class TeacherReportGenerator {
                     <div class="value">${stats.stdDev}</div>
                 </div>
                 <div class="stat-card">
-                    <div class="label">Top Performers</div>
-                    <div class="value">${stats.topPerformers.length}</div>
+                    <div class="label">Grade A Students</div>
+                    <div class="value">${stats.gradeDistribution.A || 0}</div>
                 </div>
             </div>
             
             <div class="chart-container">
-                <h2>📊 Grade Distribution (Relative Ranking)</h2>
+                <h2>Grade Distribution (Relative Ranking)</h2>
                 <div class="grade-bars">
                     ${Object.entries(stats.gradeDistribution).map(([grade, count]) => {
                         const percentage = (count / stats.totalStudents * 100).toFixed(0);
@@ -460,7 +484,7 @@ class TeacherReportGenerator {
             
             <div class="students-section">
                 <div class="student-list top">
-                    <h3>🏆 Top Performers (90 and above)</h3>
+                    <h3>Top 5 Students</h3>
                     ${stats.topPerformers.length > 0 ?
                         stats.topPerformers.map(student => `
                         <div class="student-item">
@@ -472,7 +496,7 @@ class TeacherReportGenerator {
                 </div>
 
                 <div class="student-list needs-help">
-                    <h3>📚 Needs Improvement (below 70)</h3>
+                    <h3>Needs Improvement (below 70)</h3>
                     ${stats.needsImprovement.length > 0 ?
                         stats.needsImprovement.map(student => `
                         <div class="student-item">
@@ -485,7 +509,7 @@ class TeacherReportGenerator {
             </div>
             
             <div class="category-chart">
-                <h2>📈 Average Score by Subject</h2>
+                <h2>Average Score by Subject</h2>
                 <div class="category-bars">
                     ${Object.entries(stats.categoryAvgs).map(([subject, avg]) => `
                     <div class="category-item">
@@ -502,7 +526,7 @@ class TeacherReportGenerator {
             </div>
             
             <div class="recommendations">
-                <h2>💡 Summary Analysis and Recommendations</h2>
+                <h2>Summary Analysis and Recommendations</h2>
                 <ul>
                     ${this.generateRecommendations(stats).map(rec => `<li>${rec}</li>`).join('')}
                 </ul>
