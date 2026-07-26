@@ -5,7 +5,7 @@ const path = require('path');
 
 // Find HTML files
 const files = fs.readdirSync(process.cwd());
-const htmlFiles = files.filter(f => f.startsWith('teacher_report_') && f.endsWith('.html'));
+const htmlFiles = files.filter(f => f.startsWith('teacher_report') && f.endsWith('.html'));
 
 if (htmlFiles.length === 0) {
     console.log('⚠️ No teacher_report HTML file found.');

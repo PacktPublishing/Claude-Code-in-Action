@@ -47,12 +47,12 @@ node teacher-dashboard.js
 🔸 Completion: 5/5 (100%)
 🔸 Generated files:
   ✅ student_data.json (108KB)
-  ✅ teacher_report_2025-08-31.html (16KB)
+  ✅ teacher_report.html (16KB)
 ```
 
 ## Generated Files
 - `student_data.json` - Student database
-- `teacher_report_YYYY-MM-DD.html` - HTML report
+- `teacher_report.html` - HTML report
 - `report_summary_YYYY-MM-DD.csv` - Summary CSV
 - `report_detailed_YYYY-MM-DD.csv` - Detailed CSV
 

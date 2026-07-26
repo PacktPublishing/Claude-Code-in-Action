@@ -66,7 +66,7 @@ class TeacherDashboard {
         const today = new Date().toISOString().split('T')[0];
         const files = [
             { name: 'student_data.json', required: true },
-            { name: `teacher_report_${today}.html`, required: true },
+            { name: 'teacher_report.html', required: true },
             { name: `report_summary_${today}.csv`, required: false },
             { name: `report_detailed_${today}.csv`, required: false }
         ];

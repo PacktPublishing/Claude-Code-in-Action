@@ -6,7 +6,7 @@ class TeacherReportGenerator {
         // Handle both array and object with students property
         this.students = Array.isArray(data) ? data : data.students;
         this.reportDate = new Date().toISOString().split('T')[0];
-        this.reportName = `teacher_report_${this.reportDate}.html`;
+        this.reportName = 'teacher_report.html';
         this.gradeColors = {
             'A': '#5F7F6D',
             'B': '#5C7A99', 

@@ -120,7 +120,7 @@ function main() {
     console.log(colors.yellow + '\n🔸 Generated files:' + colors.reset);
     const files = [
         'student_data.json',
-        `teacher_report_${new Date().toISOString().split('T')[0]}.html`
+        'teacher_report.html'
     ];
 
     files.forEach(file => {

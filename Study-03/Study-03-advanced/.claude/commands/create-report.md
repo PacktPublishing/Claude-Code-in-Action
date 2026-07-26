@@ -21,7 +21,7 @@ node teacher-report.js
 - **Grade D**: Bottom 30% (71-100%)
 
 ## Output
-- `teacher_report_YYYY-MM-DD.html` file
+- `teacher_report.html` file
 - Viewable in a browser
 - Print-optimized styles
 
