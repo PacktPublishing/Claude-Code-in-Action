@@ -293,6 +293,28 @@
                 transform: none;
             }
         }
+
+        /* Compact landscape layout */
+        .container { max-width: 1680px; }
+        .content { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; grid-template-areas: "stats stats" "chart students" "category recs"; }
+        .stats-grid { grid-area: stats; grid-template-columns: repeat(6, 1fr); margin-bottom: 0; }
+        .chart-container { grid-area: chart; margin-bottom: 0; }
+        .students-section { grid-area: students; margin-bottom: 0; }
+        .category-chart { grid-area: category; margin-bottom: 0; }
+        .recommendations { grid-area: recs; margin-bottom: 0; }
+        .header { padding: 24px 30px; }
+
+        /* Compact landscape layout: tighter spacing */
+        .content { padding: 24px; gap: 18px; }
+        .grade-bars { height: 200px; }
+        .chart-container, .category-chart, .students-section > div, .recommendations { padding: 16px 20px; }
+        .chart-container h2, .category-chart h2, .recommendations h2 { font-size: 1.05em; margin-bottom: 12px; }
+        .student-list h3 { font-size: 0.95em; }
+        .student-item { padding: 8px 12px; }
+        .stat-card { padding: 14px 8px; }
+        .stat-card .value { font-size: 1.6em; }
+        .recommendations li { padding: 8px 0 8px 24px; }
+        .category-item { margin-bottom: 10px; }
     </style>
 </head>
 <body>
