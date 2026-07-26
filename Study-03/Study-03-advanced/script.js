@@ -300,23 +300,9 @@ function showFeedback(isCorrect, explanation) {
     feedbackTitle.textContent = isCorrect ? 'Correct!' : 'Incorrect';
     feedbackExplanation.textContent = explanation;
 
-    // Show the score breakdown
+    // Keep the feedback modal clean: no score breakdown lines
     if (scoreBreakdown) {
         scoreBreakdown.innerHTML = '';
-        if (isCorrect) {
-            const breakdown = scoreManager.getScoreBreakdown(
-                true,
-                gameState.timeSpent,
-                gameState.consecutiveCorrect,
-                gameState.hintUsed
-            );
-            breakdown.forEach(item => {
-                const div = document.createElement('div');
-                div.className = 'score-item';
-                div.textContent = `${item.label}: +${item.points} pts`;
-                scoreBreakdown.appendChild(div);
-            });
-        }
     }
 
     feedbackModal.classList.add('show');

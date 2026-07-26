@@ -12,10 +12,10 @@ const quizQuestions = [
         id: 1,
         category: "History",
         difficulty: "easy",
-        question: "Who was the first President of the United States?",
-        options: ["George Washington","Thomas Jefferson","John Adams","Abraham Lincoln"],
+        question: "Which ancient civilization built the pyramids of Giza?",
+        options: ["Ancient Egyptian","Mesopotamian","Ancient Greek","Roman"],
         correctAnswer: 0,
-        explanation: "George Washington became the first President of the United States in 1789."
+        explanation: "The pyramids of Giza were built by the ancient Egyptians as royal tombs around 2500 BC."
     },
     {
         id: 2,
