@@ -157,18 +157,18 @@ Direct file editing, terminal, and Git integration included.
 > **Example**: Todo app [🎯 Live demo](https://vibecoding-eng-ch04.vercel.app) — add/edit/delete tasks, category tags, progress dashboard, dark mode (mobile-style and desktop-optimized layouts)
 
 **Chapter 5: Systematic Development and Management Through Game Building** [📝 Prompts](https://github.com/PacktPublishing/Claude-Code-in-Action/blob/main/PROMPTS.md#chapter-5-systematic-development-and-management-through-game-building)
-- 05-1 Creating AI Content Without Hallucinations
+- 05-1 Creating reliable AI content
   - Step 1: Implementing the quiz game [📥 Download](https://download-directory.github.io/?url=https://github.com/PacktPublishing/Claude-Code-in-Action/tree/main/Study-03/Study-03-basic)
-  - Fixing hallucinations
-- 05-2 Boosting Development Efficiency with Automation
-  - Step 2: Extending the game
+  - Resolving hallucinations
+- 05-2 Boosting development efficiency through automation
+  - Step 2: Expanding the game
   - Automating repetitive tasks with custom commands
   - Extending custom commands
-  - Automating new quiz question creation
-- 05-3 Selective Update Strategies Through Command Chaining
-  - Step 3: Data persistence and a ranking system
-  - Automating the game development workflow
-  - Custom commands Claude Code creates on its own
+  - Automating the addition of new quiz questions
+- 05-3 Maintenance strategies learned through the use of custom commands
+  - Step 3: Data storage and ranking system
+  - Automating the game production workflow
+  - Custom commands created by Claude Code itself
   - Building an efficient maintenance workflow
 
 > **Example**: General knowledge quiz game [🎯 Live demo](https://vibecoding-eng-ch05.vercel.app) — four-option multiple choice, category modes, scoring system, leaderboard (with hallucination verification guidelines and custom command automation)

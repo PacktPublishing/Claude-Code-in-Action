@@ -339,7 +339,7 @@ Please analyze the files in the @web_version folder and check if the to-do app i
 
 ### Chapter 5: Systematic Development and Management Through Game Building
 
-#### 05-1 Creating AI Content Without Hallucinations
+#### 05-1 Creating reliable AI content
 
 ```
 I want to build a general knowledge quiz game. Write a PRD.
@@ -566,7 +566,7 @@ Show me the contents of this project's CLAUDE.md.
 Review the questions created so far against the guidelines we just saved. If any quiz questions or answers don't meet the guidelines, fix them accordingly.
 ```
 
-#### 05-2 Boosting Development Efficiency with Automation
+#### 05-2 Boosting development efficiency through automation
 
 ```
 Create a custom commands folder for the current project.
@@ -600,7 +600,7 @@ Take $1 as the category and $2 as the difficulty.
 Match the format of the existing questions, and make sure it strictly follows the verification guidelines.
 ```
 
-#### 05-3 Selective Update Strategies Through Command Chaining
+#### 05-3 Maintenance strategies learned through the use of custom commands
 
 ```
 Create .claude/commands/quiz-check.md.
@@ -612,7 +612,7 @@ It should manage the ranking system.
 ```
 
 ```
-Use /quiz-check to verify all questions, /quiz-stats to analyze statistics, and /quiz-leaderboard to update the leaderboard, all in a single request.
+Use /quiz-check to verify all questions, /quiz-stats to analyze statistics, and /quiz-leaderboard to update the leaderboard—all in a single request.
 ```
 
 ```
