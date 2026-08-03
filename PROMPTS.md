@@ -660,8 +660,8 @@ I've saved my OpenRouter API key in a .env file. Set things up so this key can b
 
 ```
 Now test that the prepared API actually works.
-Use the google/gemma-3-27b-it:free model for image recognition,
-and the deepseek/deepseek-chat -v3.1:free model for text.
+Use the google/gemma-4-26b-a4b-it:free model for image recognition,
+and the openai/gpt-oss-20b:free model for text.
 Test both text and image recognition through the API and report the results.
 ```
 
@@ -670,14 +670,25 @@ Test both text and image recognition through the API and report the results.
 
 ```
 Using the OpenRouter API we set up earlier, I want to build a web application that recognizes ingredients in a fridge photo and recommends recipes. Split it into 3 steps and write a PRD for each.
-Step 1 takes an image as input and recognizes it using the google/gemma-3 -27b-it:free model.
-Step 2 generates recipes from the Step 1 results using the deepseek/deepseek-chat-v3.1:free model.
+Step 1 takes an image as input and recognizes it using the google/gemma-4-26b-a4b-it:free model.
+Step 2 generates recipes from the Step 1 results using the openai/gpt-oss-20b:free model.
 Step 3 creates user profiles and saves recipes.
 Save the steps as PRD_step1.md, PRD_step2.md, and PRD_step3.md.
 ```
 
 ```
 Execute PRD_step1.md.
+```
+
+```
+The app works, but it still looks like a default Streamlit page. Give all three steps one shared look.
+Put the styling in a single ui.py module so every step imports the same theme.
+Use a warm cooking palette: orange #FF6B35 for accents, a cream background, white cards with soft shadows, and rounded corners.
+Add a gradient title, a three-step "how it works" strip so the first screen is not mostly empty,
+and hide the Streamlit toolbar, Deploy button, and sidebar collapse arrow so screenshots show only the app.
+Keep every screen compact enough to fit a wide browser window without scrolling:
+one-line page header, tight spacing, a capped height on the photo preview,
+and the recognized ingredients in a two-column grid rather than a stack of expanders.
 ```
 
 ```
