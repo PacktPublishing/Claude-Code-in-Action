@@ -708,31 +708,31 @@ Run the main application so I can test the Step 3 results.
 
 **Code quality reviewer agent:**
 ```
-Code reviewer: a code quality specialist who reads code, checks for bugs, verifies it follows coding conventions, and suggests performance optimizations.
+Create a subagent called code-bug-analyzer that works only in this project. It is a code quality reviewer that checks for bugs, coding rule violations and performance problems. Give it read-only access only, and run it on opus. Save it as .claude/agents/code-bug-analyzer.md
 ```
 
 ```
-Have code-bug-analyzer review the FridgeChef application code.
+Have code-bug-analyzer review the code of the 'Please Take Care of My Refrigerator' application.
 ```
 
 **System optimization engineer agent:**
 ```
-Optimization expert: a systems optimization engineer who makes applications run smoothly, speeds them up, and finds and fixes bottlenecks.
+Create a second subagent called performance-optimizer. It is a performance engineer that speeds the app up and removes bottlenecks. Save it as .claude/agents/performance-optimizer.md
 ```
 
 **User experience expert agent:**
 ```
-UX designer: a user experience expert who improves screen design, button placement, and error messages so users can navigate easily and comfortably.
+Create a third subagent called ux-design-advisor. It is a user experience designer that reviews the layout and the interface and makes the app easier to use. Save it as .claude/agents/ux-design-advisor.md
 ```
 
 #### Multi-Agent Collaboration
 
 ```
-Have code-bug-analyzer review the entire 'FridgeChef' application code, then have performance-optimizer fix the issues found and optimize performance, and finally have ux-design-advisor improve the user experience.
+Have code-bug-analyzer review the entire 'Please Take Care of My Refrigerator' application code, then have performance-optimizer fix the identified issues and optimize performance, and finally have ux-design-advisor improve the user experience.
 ```
 
 ```
-Run the improved app so I can check it in the browser.
+Run the improved app so I can check it in the browser
 ```
 
 ```
@@ -740,50 +740,33 @@ Back up the current state.
 ```
 
 ```
-Restore from the backup.
+Restore from backup.
+```
+
+#### Creating the Five-Agent Team
+
+```
+Create five subagents in the .claude/agents/ folder. product-manager-prd writes the PRD and manages the schedule, backend-architect designs the server and the APIs, frontend-developer builds the interface, qa-engineer handles testing and code review, and ai-integration-specialist connects the OpenRouter API. Set the model to sonnet for each of them.
 ```
 
 #### AI Empathy Diary
 
 ```
-Product planning manager: a product manager who oversees the entire development schedule and writes PRDs that define the product's goals, features, and user requirements
-```
-
-```
-Backend developer: a server-side development expert responsible for server architecture design, API development, data processing, external service integration, and security and performance optimization. Builds stable, scalable backend systems.
-```
-
-```
-Frontend developer: a client-side development expert responsible for user interface design and implementation, responsive design, web accessibility, and performance optimization.
-```
-
-```
-Quality assurance engineer: a quality management expert who performs functional testing of the whole system, error-handling verification, performance optimization, and code review. Finds bugs and suggests usability improvements.
-```
-
-```
-AI integration specialist: an artificial intelligence expert responsible for LLM and AI service integration, prompt optimization, model fine-tuning, and building AI pipelines. In this project, an LLM specialist who connects to the DeepSeek model through the OpenRouter API to implement text generation and summarization.
-```
-
-```
-Build an AI Empathy Diary. It's a diary application where I write one line about my day, and the AI analyzes my emotions, empathizes, and comforts me.
-Have backend-architect integrate the OpenRouter API to implement emotion analysis and empathetic message generation.
-Use the free DeepSeek V3.1 model, and use the API key stored in the '.env' file in the current folder.
-Have frontend-developer create a warm, cozy diary UI, then have qa-engineer test that it works reliably across various scenarios.
-If any problems are found, keep fixing them until they're fully resolved, and deliver the final version as an 'index.html' file that opens directly in the browser.
+Please create an AI empathy diary application, where, if the user writes a one-line summary of their day, the AI analyzes their emotions, offers empathy, and provides words of comfort.
+The backend architect should implement the features for emotion analysis and empathetic message generation by integrating the OpenRouter API. Please use the free openai/gpt-oss-20b:free model and the API key stored in the .env file within the current directory.
+The frontend developer should design a diary UI that evokes a warm and comforting atmosphere.
+Finally, the QA engineer should test the application to ensure it functions smoothly across various scenarios. Any issues found must be fully resolved, and the final version should be delivered as an index.html file that can be opened directly in a web browser.
 ```
 
 
 #### PDF Summarizer App
 
 ```
-We're going to build a web application that summarizes PDF documents with AI when they're uploaded.
-First, have product-manager-prd write a detailed PRD and feature spec for the PDF summarizer app,
-then have backend-architect implement PDF file upload and text extraction.
-Have ai-integration-specialist integrate the OpenRouter API to summarize the extracted text.
-Use the free DeepSeek V3.1 model, and use the API key stored in the '.env' file in the current folder.
-Have frontend-developer implement a drag-and-drop file upload UI and a clean interface that displays the summary results,
-then have qa-engineer test that it works reliably across various scenarios. If any problems are found, keep fixing them until they're fully resolved, and deliver the final version as an 'index_pdf.html' file that opens directly in the browser.
+We're going to create a web application where you can upload a PDF document and the AI will summarize it.
+First, product-manager-prd will write a detailed PRD and feature specifications for the PDF document summary app and then the backend-architect will implement the PDF file upload and text extraction features.
+The ai-integration-specialist will integrate the OpenRouter API to summarize the extracted text.
+Use the free openai/gpt-oss-20b:free model, and use the API key stored in the '.env' file in the current folder. The frontend-developer will implement a drag-and-drop file upload UI and a clean interface to display the summary results,
+The qa-engineer should test to ensure everything works smoothly in various scenarios. If any issues are found, fix them completely, and create the final version as an 'index_pdf.html' file that can be opened directly in the browser.
 ```
 
 ---
