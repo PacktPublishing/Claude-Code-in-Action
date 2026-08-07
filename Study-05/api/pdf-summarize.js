@@ -87,14 +87,16 @@ Response rules:
                 'X-Title': 'PDF Summarizer App'
             },
             body: JSON.stringify({
-                model: 'deepseek/deepseek-chat',
+                model: 'openai/gpt-oss-20b:free',
                 messages: [
                     {
                         role: 'user',
                         content: prompt
                     }
                 ],
-                max_tokens: 1000,
+                // gpt-oss is a reasoning model: reasoning tokens come out of
+                // this budget, so a short summary still needs plenty of room.
+                max_tokens: 3000,
                 temperature: 0.3
             })
         });

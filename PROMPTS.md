@@ -74,7 +74,7 @@ I'm going to proceed according to this PRD. First, please write an HTML document
 ```
 
 ```
-Please revise the [Number of Projects] item in the 'performance-metrics' section to be a list that specifically details the performance over the past three years.
+Please revise the [Result label] items in the 'proof-strip' section to be a list that specifically details the performance over the past three years.
 ```
 
 ```
@@ -82,7 +82,7 @@ Apply a modern and sophisticated design to the HTML document.
 ```
 
 ```
-Move the [Before/After Metrics] from the 'case-studies' section to the 'hero-introduction' section and present them as a chart.
+Move the [One-line result] metrics from the 'case-studies' section to the 'hero' section and present them as a chart.
 ```
 
 ```
@@ -98,7 +98,7 @@ Here are my key case studies.
 ```
 
 ```
-Select one WordPress theme that best suits this portfolio and customize its design. Use different color tones for each section to make them easily distinguishable.
+Select one WordPress theme that best suits this portfolio and restyle the entire page after it, updating the colors and fonts to match the theme. Use different color tones for each section to make them easily distinguishable. Apply the design directly to the HTML document.
 ```
 
 ```

@@ -1,8 +1,8 @@
 /**
- * OpenRouter API Client with DeepSeek V3.1 Integration
+ * OpenRouter API Client with gpt-oss-20b Integration
  *
  * This module provides a robust client for interacting with OpenRouter API
- * specifically optimized for DeepSeek V3.1 model text summarization tasks.
+ * specifically optimized for gpt-oss-20b model text summarization tasks.
  *
  * Features:
  * - Automatic retry logic with exponential backoff
@@ -16,7 +16,7 @@ class OpenRouterClient {
     constructor(config = {}) {
         this.apiKey = config.apiKey || '';
         this.baseUrl = config.baseUrl || 'https://openrouter.ai/api/v1';
-        this.model = config.model || 'deepseek/deepseek-chat';
+        this.model = config.model || 'openai/gpt-oss-20b:free';
         this.maxRetries = config.maxRetries || 3;
         this.retryDelay = config.retryDelay || 1000;
         this.maxTokensPerRequest = config.maxTokensPerRequest || 4000;
@@ -54,10 +54,11 @@ class OpenRouterClient {
      * Calculate estimated tokens for text (rough approximation)
      */
     estimateTokens(text) {
-        // Rough estimation: 1 token ≈ 4 characters for English, 2-3 for Korean
-        const koreanChars = (text.match(/[\u3131-\u3163\uac00-\ud7a3]/g) || []).length;
-        const otherChars = text.length - koreanChars;
-        return Math.ceil((koreanChars / 2.5) + (otherChars / 4));
+        // Rough estimation: about 4 characters per token for Latin text, and
+        // roughly 2.5 for CJK, which packs more meaning into each character.
+        const cjkChars = (text.match(/[\u3131-\u3163\uac00-\ud7a3\u3040-\u30ff\u4e00-\u9fff]/g) || []).length;
+        const otherChars = text.length - cjkChars;
+        return Math.ceil((cjkChars / 2.5) + (otherChars / 4));
     }
 
     /**
@@ -198,7 +199,7 @@ class OpenRouterClient {
             this.stats.successfulRequests++;
             if (data.usage) {
                 this.stats.totalTokensUsed += data.usage.total_tokens || 0;
-                // Approximate cost calculation (DeepSeek is very cost-effective)
+                // Approximate cost calculation (gpt-oss is very cost-effective)
                 this.stats.totalCost += (data.usage.total_tokens || 0) * 0.000001; // $0.000001 per token (estimate)
             }
 

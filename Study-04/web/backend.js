@@ -12,7 +12,7 @@ class FridgeRecipeBackend {
         // For development/local testing - direct API calls are possible locally
         this.apiKey = this.getApiKey();
         this.baseUrl = 'https://openrouter.ai/api/v1';
-        this.model = 'google/gemini-3-flash-preview';
+        this.model = 'openai/gpt-oss-20b:free';
     }
 
     /**

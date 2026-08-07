@@ -200,7 +200,7 @@ Direct file editing, terminal, and Git integration included.
 
 > **Examples**:
 > - AI Empathy Diary app [🎯 Live demo](https://vibecoding-eng-ch07.vercel.app): write one line about your day → emotion analysis → empathetic message (agent collaboration: backend, frontend, QA)
-> - PDF Summarizer AI [🎯 Live demo](https://vibecoding-eng-ch07.vercel.app/pdf): upload a PDF ([📥 sample input](https://raw.githubusercontent.com/PacktPublishing/Claude-Code-in-Action/main/input-examples/korean-spelling.pdf) — a sample PDF document in Korean) → text extraction → summary/analysis (5-agent collaboration: planning, backend, AI integration, frontend, QA)
+> - PDF Summarizer AI [🎯 Live demo](https://vibecoding-eng-ch07.vercel.app/pdf): upload a PDF ([📥 sample input](https://raw.githubusercontent.com/PacktPublishing/Claude-Code-in-Action/main/input-examples/ai-assistant-guide.pdf) — a sample PDF document) → text extraction → summary/analysis (5-agent collaboration: planning, backend, AI integration, frontend, QA)
 
 **Chapter 8: Going Beyond Claude Code's Limits with MCP** [📝 Prompts](https://github.com/PacktPublishing/Claude-Code-in-Action/blob/main/PROMPTS.md#chapter-8-going-beyond-claude-codes-limits-with-mcp)
 - 08-1 Understanding MCP and Connecting It to Claude Code

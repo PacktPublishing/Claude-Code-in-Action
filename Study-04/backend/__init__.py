@@ -1,1 +1,1 @@
-# Backend module initialization
+"""FridgeChef backend package."""

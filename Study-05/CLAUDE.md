@@ -86,7 +86,7 @@ vercel dev
 ## API Integration
 
 ### OpenRouter Configuration
-- Model: `google/gemma-4-26b-a4b-it:free` (the original edition used `google/gemma-3-27b-it:free`, which OpenRouter has retired)
+- Model: `openai/gpt-oss-20b:free` (the original edition used `openai/gpt-oss-20b:free`, which OpenRouter has retired)
 - Temperature: 0.7
 - Max tokens: 500
 

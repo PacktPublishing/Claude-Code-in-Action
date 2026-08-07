@@ -2,7 +2,7 @@
  * Text Summarization Service
  *
  * This service provides intelligent text summarization using OpenRouter API
- * with DeepSeek V3.1 model, optimized for Korean language support.
+ * with gpt-oss-20b model, optimized for Korean language support.
  *
  * Features:
  * - Multiple summarization modes (brief, standard, detailed)

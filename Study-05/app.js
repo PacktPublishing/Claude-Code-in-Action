@@ -16,43 +16,43 @@ class EmpathyDiaryApp {
                 icon: '😊',
                 color: '#ffd700',
                 lightColor: '#fff8dc',
-                korean: 'Joy'
+                label: 'Joy'
             },
             sadness: {
                 icon: '😢',
                 color: '#87ceeb',
                 lightColor: '#e6f3ff',
-                korean: 'Sadness'
+                label: 'Sadness'
             },
             anger: {
                 icon: '😠',
                 color: '#ff6b6b',
                 lightColor: '#ffe0e0',
-                korean: 'Anger'
+                label: 'Anger'
             },
             fear: {
                 icon: '😨',
                 color: '#dda0dd',
                 lightColor: '#f3e5f3',
-                korean: 'Fear'
+                label: 'Fear'
             },
             surprise: {
                 icon: '😮',
                 color: '#ffb6c1',
                 lightColor: '#ffe4e7',
-                korean: 'Surprise'
+                label: 'Surprise'
             },
             calm: {
                 icon: '😌',
                 color: '#98fb98',
                 lightColor: '#f0fff0',
-                korean: 'Calm'
+                label: 'Calm'
             },
             mixed: {
                 icon: '🤔',
                 color: '#d3d3d3',
                 lightColor: '#f5f5f5',
-                korean: 'Mixed'
+                label: 'Mixed'
             }
         };
 
@@ -221,7 +221,7 @@ class EmpathyDiaryApp {
         } catch (error) {
             console.error('Emotion analysis error:', error);
             this.hideLoading();
-            this.showToast('An error occurred during emotion analysis. Please try again.', 'error');
+            this.showToast(error.message || 'An error occurred during emotion analysis. Please try again.', 'error');
         }
     }
 
@@ -239,7 +239,7 @@ class EmpathyDiaryApp {
                 id: this.generateId(),
                 text: this.currentAnalysis.text,
                 emotion: this.currentAnalysis.emotion,
-                emotionKorean: this.currentAnalysis.emotionKorean,
+                emotionLabel: this.currentAnalysis.emotionLabel,
                 emotionScore: this.currentAnalysis.emotionScore,
                 empathyMessage: this.currentAnalysis.empathyMessage,
                 timestamp: this.currentAnalysis.timestamp,
@@ -295,7 +295,7 @@ class EmpathyDiaryApp {
 
         // Emotion icon and name
         this.elements.emotionIcon.textContent = config.icon;
-        this.elements.emotionName.textContent = analysis.emotionKorean || config.korean;
+        this.elements.emotionName.textContent = analysis.emotionLabel || config.label;
         this.elements.emotionName.style.color = config.color;
 
         // Emotion intensity
@@ -392,7 +392,7 @@ class EmpathyDiaryApp {
                 <div class="entry-content">${this.escapeHtml(entry.text)}</div>
                 <div class="entry-emotion">
                     <span class="entry-emotion-icon">${config.icon}</span>
-                    <span class="entry-emotion-text">${entry.emotionKorean} (${entry.emotionScore}/10)</span>
+                    <span class="entry-emotion-text">${entry.emotionLabel || config.label} (${entry.emotionScore}/10)</span>
                 </div>
             </div>
         `;

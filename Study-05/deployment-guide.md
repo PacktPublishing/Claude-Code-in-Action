@@ -2,7 +2,7 @@
 
 ## 📋 Overview
 
-This guide explains how to deploy the PDF summarization web application, which uses the OpenRouter API and the DeepSeek V3.1 model.
+This guide explains how to deploy the PDF summarization web application, which uses the OpenRouter API and the gpt-oss-20b model.
 
 ## 🏗️ Architecture
 
@@ -93,7 +93,7 @@ app.post('/api/summarize', async (req, res) => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                model: 'deepseek/deepseek-chat',
+                model: 'openai/gpt-oss-20b:free',
                 messages: [
                     { role: 'system', content: 'Summarization system prompt' },
                     { role: 'user', content: text }
@@ -456,7 +456,7 @@ app.use((req, res, next) => {
 ## 📞 Support and Contact
 
 - **OpenRouter documentation**: https://openrouter.ai/docs
-- **DeepSeek model information**: https://openrouter.ai/models/deepseek/deepseek-chat
+- **gpt-oss model information**: https://openrouter.ai/models/openai/gpt-oss-20b:free
 - **Technical support**: project issue tracker or contact the development team
 
 ## 📄 License

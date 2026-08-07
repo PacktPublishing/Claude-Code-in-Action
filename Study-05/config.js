@@ -38,11 +38,11 @@ class AppConfig {
 
             // Model Configuration
             models: {
-                default: 'deepseek/deepseek-chat',
+                default: 'openai/gpt-oss-20b:free',
                 available: [
                     {
-                        id: 'deepseek/deepseek-chat',
-                        name: 'DeepSeek V3.1',
+                        id: 'openai/gpt-oss-20b:free',
+                        name: 'gpt-oss-20b',
                         description: 'High-performance chat model (recommended)',
                         costPerToken: 0.000001,
                         maxTokens: 8192,
@@ -50,8 +50,8 @@ class AppConfig {
                         recommended: true
                     },
                     {
-                        id: 'deepseek/deepseek-coder',
-                        name: 'DeepSeek Coder',
+                        id: 'openai/gpt-oss-20b:free',
+                        name: 'gpt-oss-20b',
                         description: 'Specialized for code and technical documents',
                         costPerToken: 0.000001,
                         maxTokens: 8192,
@@ -67,7 +67,7 @@ class AppConfig {
                 reserveForResponse: 1000,
                 chunkOverlap: 200,
                 estimationMultipliers: {
-                    korean: 2.5,
+                    multibyte: 2.5,
                     english: 4,
                     mixed: 3
                 }
@@ -96,7 +96,7 @@ class AppConfig {
                     }
                 },
                 defaultMode: 'standard',
-                language: 'korean',
+                language: 'english',
                 includeKeyPoints: true,
                 structuredOutput: true
             },

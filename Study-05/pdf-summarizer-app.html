@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Document Summarizer - OpenRouter & DeepSeek V3.1</title>
+    <title>PDF Document Summarizer - OpenRouter & gpt-oss-20b</title>
     <style>
         :root {
             --primary-color: #2563eb;
@@ -406,7 +406,7 @@
     <div class="container">
         <div class="header">
             <h1>📄 PDF Document Summarizer</h1>
-            <p>Intelligent document summarization system powered by the OpenRouter API and DeepSeek V3.1</p>
+            <p>Intelligent document summarization system powered by the OpenRouter API and gpt-oss-20b</p>
         </div>
 
         <div class="main-content">
@@ -433,8 +433,8 @@
                     <div class="form-group">
                         <label for="model">Model Selection</label>
                         <select id="model" class="form-control">
-                            <option value="deepseek/deepseek-chat">DeepSeek V3.1 (Recommended)</option>
-                            <option value="deepseek/deepseek-coder">DeepSeek Coder</option>
+                            <option value="openai/gpt-oss-20b:free">gpt-oss-20b (Recommended)</option>
+                            <option value="openai/gpt-oss-20b:free">gpt-oss-20b</option>
                         </select>
                     </div>
                 </div>
@@ -593,7 +593,7 @@
 
                 // Initialize token manager
                 this.tokenManager = new TokenManager({
-                    model: 'deepseek/deepseek-chat',
+                    model: 'openai/gpt-oss-20b:free',
                     maxTokensPerRequest: 4000,
                     costPerToken: 0.000001
                 });

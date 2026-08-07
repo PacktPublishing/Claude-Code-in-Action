@@ -2,7 +2,7 @@
  * Usage Examples for PDF Summarization Application
  *
  * This file contains practical examples of how to use the PDF summarization
- * modules with OpenRouter API and DeepSeek V3.1 model.
+ * modules with OpenRouter API and gpt-oss-20b model.
  */
 
 // =============================================================================
@@ -16,7 +16,7 @@ async function basicSummarizationExample() {
     const config = createConfig('development');
     const apiClient = new OpenRouterClient({
         apiKey: 'sk-or-v1-your-api-key-here',
-        model: 'deepseek/deepseek-chat'
+        model: 'openai/gpt-oss-20b:free'
     });
 
     const summarizationService = new TextSummarizationService(apiClient, {
@@ -84,7 +84,7 @@ async function pdfProcessingExample() {
         });
 
         const tokenManager = new TokenManager({
-            model: 'deepseek/deepseek-chat',
+            model: 'openai/gpt-oss-20b:free',
             maxTokensPerRequest: 4000
         });
 
@@ -171,7 +171,7 @@ async function advancedConfigurationExample() {
 
     const apiClient = new OpenRouterClient({
         apiKey: 'sk-or-v1-your-api-key-here',
-        model: 'deepseek/deepseek-chat',
+        model: 'openai/gpt-oss-20b:free',
         maxRetries: 3,
         requestTimeout: 90000
     });

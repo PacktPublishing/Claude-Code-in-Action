@@ -1,576 +1,311 @@
-"""
-FridgeChef - Step 3: User Profile and Recipe Management System
-Complete application with user authentication and personalization
-"""
-import streamlit as st
+"""FridgeChef - Step 3: accounts, saved recipes, and a personal dashboard."""
 import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
-from datetime import datetime
-import json
+import streamlit as st
 
-# Import backend modules
-from backend.config import Config
-from backend.openrouter_client import OpenRouterClient
-from backend.image_service import ImageProcessor
-from backend.recipe_generator import RecipeGenerator
-from backend.ingredient_manager import IngredientManager
-from backend.database import RecipeDatabase
 from backend.auth import AuthManager
+from backend.config import Config
+from backend.image_service import ImageProcessor, parse_ingredients
+from backend.openrouter_client import OpenRouterClient, OpenRouterError
+from backend.recipe_generator import Recipe, RecipeGenerator
 from backend.user_profile import UserProfileManager
+from ui import apply_theme, card, category_grid, recipe_card, steps_strip
 
-# Page configuration
-st.set_page_config(
-    page_title="FridgeChef - Complete Recipe Management System",
-    page_icon="🍳",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+apply_theme("FridgeChef", "Your personal recipe assistant")
 
-# Initialize session state
-if 'auth_manager' not in st.session_state:
-    st.session_state.auth_manager = AuthManager()
-if 'profile_manager' not in st.session_state:
-    st.session_state.profile_manager = UserProfileManager()
-if 'user' not in st.session_state:
-    st.session_state.user = None
-if 'token' not in st.session_state:
-    st.session_state.token = None
-if 'page' not in st.session_state:
-    st.session_state.page = 'login'
-if 'recognized_ingredients' not in st.session_state:
-    st.session_state.recognized_ingredients = None
-if 'generated_recipes' not in st.session_state:
-    st.session_state.generated_recipes = None
-if 'ingredient_manager' not in st.session_state:
-    st.session_state.ingredient_manager = IngredientManager()
-if 'db' not in st.session_state:
-    st.session_state.db = RecipeDatabase()
+CUISINES = ["Any", "Korean", "Italian", "Japanese", "Mexican", "Indian", "American"]
+DIFFICULTIES = ["Easy", "Medium", "Hard"]
+DIETARY = ["Vegetarian", "Vegan", "Low carb", "High protein", "Gluten free"]
 
-def main():
-    """Main application function"""
 
-    # Validate configuration
-    try:
-        Config.validate()
-    except ValueError as e:
-        st.error(f"Configuration error: {e}")
-        st.stop()
+@st.cache_resource
+def get_auth() -> AuthManager:
+    return AuthManager()
 
-    # Check authentication
-    if st.session_state.user is None:
-        show_auth_page()
-    else:
-        show_main_app()
 
-def show_auth_page():
-    """Show authentication page (login/register)"""
-    st.title("🍳 FridgeChef")
-    st.subheader("AI-Powered Personalized Recipe Recommendation System")
+@st.cache_resource
+def get_profiles() -> UserProfileManager:
+    return UserProfileManager()
 
-    col1, col2, col3 = st.columns([1, 2, 1])
 
-    with col2:
-        tab1, tab2 = st.tabs(["Login", "Sign Up"])
+# --------------------------------------------------------------------- #
+# login
+# --------------------------------------------------------------------- #
+def login_screen() -> None:
+    _, middle, _ = st.columns([1, 2, 1])
+    with middle:
+        login_tab, signup_tab = st.tabs(["Log in", "Sign up"])
 
-        with tab1:
-            show_login_form()
+        with login_tab:
+            email = st.text_input("Email", key="login_email")
+            password = st.text_input("Password", type="password", key="login_password")
+            if st.button("Log in", type="primary", use_container_width=True):
+                ok, message = get_auth().log_in(email, password)
+                if ok:
+                    st.session_state["user"] = email.strip().lower()
+                    st.session_state["nickname"] = message
+                    st.rerun()
+                else:
+                    st.error(message)
 
-        with tab2:
-            show_register_form()
+            st.caption("Just exploring? Use the demo account.")
+            if st.button("Use demo account", use_container_width=True):
+                demo_email, demo_password = get_auth().ensure_demo_account()
+                ok, message = get_auth().log_in(demo_email, demo_password)
+                if ok:
+                    st.session_state["user"] = demo_email
+                    st.session_state["nickname"] = message
+                    st.rerun()
 
-def show_login_form():
-    """Show login form"""
-    with st.form("login_form"):
-        st.subheader("Login")
+        with signup_tab:
+            new_email = st.text_input("Email", key="signup_email")
+            new_nickname = st.text_input("Nickname", key="signup_nickname")
+            new_password = st.text_input("Password", type="password", key="signup_password")
+            if st.button("Create account", type="primary", use_container_width=True):
+                ok, message = get_auth().sign_up(new_email, new_password, new_nickname)
+                (st.success if ok else st.error)(message)
 
-        email = st.text_input("Email", placeholder="your@email.com")
-        password = st.text_input("Password", type="password")
-
-        col1, col2 = st.columns(2)
-        with col1:
-            submit = st.form_submit_button("Login", type="primary", use_container_width=True)
-        with col2:
-            demo = st.form_submit_button("Demo Account", use_container_width=True)
-
-    if submit:
-        if email and password:
-            auth = st.session_state.auth_manager
-            result = auth.login(email, password)
-
-            if result['success']:
-                st.session_state.user = result['user']
-                st.session_state.token = result['token']
-                st.success("Login successful!")
-                st.rerun()
-            else:
-                st.error(result['error'])
-        else:
-            st.error("Please enter your email and password")
-
-    if demo:
-        # Demo account login
-        demo_email = "demo@fridgechef.com"
-        demo_password = "demo123"
-
-        # Create demo account if not exists
-        auth = st.session_state.auth_manager
-        auth.register(demo_email, "DemoUser", demo_password)
-
-        result = auth.login(demo_email, demo_password)
-        if result['success']:
-            st.session_state.user = result['user']
-            st.session_state.token = result['token']
-            st.success("Logged in with the demo account!")
-            st.rerun()
-
-def show_register_form():
-    """Show registration form"""
-    with st.form("register_form"):
-        st.subheader("Sign Up")
-
-        email = st.text_input("Email", placeholder="your@email.com")
-        username = st.text_input("Username", placeholder="Username")
-        password = st.text_input("Password", type="password", help="At least 6 characters")
-        password_confirm = st.text_input("Confirm Password", type="password")
-
-        terms = st.checkbox("I agree to the Terms of Service")
-
-        submit = st.form_submit_button("Sign Up", type="primary", use_container_width=True)
-
-    if submit:
-        if not all([email, username, password, password_confirm]):
-            st.error("Please fill in all fields")
-        elif password != password_confirm:
-            st.error("Passwords do not match")
-        elif not terms:
-            st.error("Please agree to the Terms of Service")
-        else:
-            auth = st.session_state.auth_manager
-            result = auth.register(email, username, password)
-
-            if result['success']:
-                st.success(result['message'])
-                st.info("Log in from the Login tab")
-            else:
-                st.error(result['error'])
-
-def show_main_app():
-    """Show main application for authenticated users"""
-
-    # Header with user info
-    col1, col2, col3 = st.columns([2, 1, 1])
-
-    with col1:
-        st.title("🍳 FridgeChef")
-
-    with col2:
-        user = st.session_state.user
-        st.write(f"👤 {user['username']}")
-
-    with col3:
-        if st.button("Logout", use_container_width=True):
-            logout()
-
-    # Main tabs
-    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
-        "🏠 Dashboard",
-        "📷 Ingredient Recognition",
-        "🍽️ Recipe Generation",
-        "📚 My Recipes",
-        "👤 Profile",
-        "🎯 Recommendations"
+    st.write("")
+    steps_strip([
+        ("Snap", "The AI names what is in your fridge."),
+        ("Cook", "Recipes match your taste and your time."),
+        ("Keep", "Save and rate the ones that worked."),
     ])
 
-    with tab1:
-        show_dashboard()
 
-    with tab2:
-        show_ingredient_recognition()
+# --------------------------------------------------------------------- #
+# pages
+# --------------------------------------------------------------------- #
+def page_dashboard(email: str) -> None:
+    profiles = get_profiles()
+    stats = profiles.stats(email)
 
-    with tab3:
-        show_recipe_generation()
+    card("My cooking dashboard", "Everything you have saved, at a glance.")
+    c1, c2, c3 = st.columns(3)
+    c1.metric("Saved recipes", stats["saved"])
+    c2.metric("Recipes cooked", stats["cooked"])
+    c3.metric("Average rating", stats["avg_rating"] or "-")
 
-    with tab4:
-        show_my_recipes()
-
-    with tab5:
-        show_profile()
-
-    with tab6:
-        show_recommendations()
-
-def show_dashboard():
-    """Show user dashboard with statistics"""
-    st.header("📊 My Cooking Dashboard")
-
-    user_id = st.session_state.user['id']
-    profile_manager = st.session_state.profile_manager
-
-    # Get statistics
-    stats = profile_manager.get_statistics(user_id)
-
-    # Key metrics
-    col1, col2, col3, col4 = st.columns(4)
-
-    with col1:
-        st.metric("Saved Recipes", f"{stats['total_saved']}", delta="+2 this week")
-
-    with col2:
-        st.metric("Dishes Cooked", f"{stats['total_cooked']}", delta="+3 this month")
-
-    with col3:
-        st.metric("Average Rating", f"{stats['avg_rating']:.1f} ⭐" if stats['avg_rating'] else "- ⭐")
-
-    with col4:
-        st.metric("Recipe Folders", f"{stats['total_folders']}")
-
-    # Charts
-    st.subheader("📈 Statistics")
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        # Cuisine distribution pie chart
-        if stats['favorite_cuisine']:
-            fig = px.pie(
-                values=list(stats['favorite_cuisine'].values()),
-                names=list(stats['favorite_cuisine'].keys()),
-                title="Favorite Cuisine Distribution"
-            )
-            st.plotly_chart(fig, use_container_width=True)
-        else:
-            st.info("No saved recipes yet")
-
-    with col2:
-        # Activity timeline (sample data)
-        dates = pd.date_range(end=datetime.now(), periods=30)
-        activity = pd.DataFrame({
-            'date': dates,
-            'count': [1 if i % 3 == 0 else 0 for i in range(30)]
-        })
-
-        fig = px.bar(
-            activity,
-            x='date',
-            y='count',
-            title="Activity in the Last 30 Days"
-        )
-        st.plotly_chart(fig, use_container_width=True)
-
-    # Recent activity
-    st.subheader("📝 Recent Activity")
-
-    recent_recipes = profile_manager.get_saved_recipes(user_id)[:5]
-    if recent_recipes:
-        for saved in recent_recipes:
-            recipe = saved['recipe']
-            col1, col2, col3 = st.columns([3, 1, 1])
-
-            with col1:
-                st.write(f"• {recipe.get('name', 'Untitled Recipe')}")
-
-            with col2:
-                if saved.get('rating'):
-                    st.write(f"{'⭐' * saved['rating']}")
-
-            with col3:
-                st.caption(saved['saved_at'][:10])
-    else:
-        st.info("No recent activity")
-
-def show_ingredient_recognition():
-    """Show ingredient recognition page"""
-    st.header("📷 Fridge Ingredient Recognition")
-
-    col1, col2 = st.columns([1, 1])
-
-    with col1:
-        uploaded_file = st.file_uploader(
-            "Choose a photo of your fridge",
-            type=['jpg', 'jpeg', 'png', 'webp'],
-            accept_multiple_files=False
-        )
-
-        if uploaded_file is not None:
-            st.image(uploaded_file, caption="Uploaded image", use_container_width=True)
-
-            processor = ImageProcessor()
-            is_valid, error_msg = processor.validate_image(uploaded_file)
-
-            if not is_valid:
-                st.error(error_msg)
-            else:
-                if st.button("🔍 Start Ingredient Recognition", type="primary", use_container_width=True):
-                    recognize_ingredients(uploaded_file)
-
-    with col2:
-        if st.session_state.recognized_ingredients:
-            st.subheader("Recognized Ingredients")
-            display_recognized_ingredients()
-
-            # Save ingredients option
-            if st.button("💾 Save Ingredients", use_container_width=True):
-                st.success("Ingredients saved")
-
-def show_recipe_generation():
-    """Show recipe generation page"""
-    st.header("🍽️ Recipe Generation")
-
-    manager = st.session_state.ingredient_manager
-    current_ingredients = manager.get_ingredients()
-
-    if not current_ingredients:
-        st.warning("Please recognize or add ingredients first")
+    saved = profiles.list_saved(email)
+    if not saved:
+        st.info("No saved recipes yet. Generate one on the **Create recipe** page and save it.")
         return
 
-    # Recipe preferences
-    col1, col2, col3 = st.columns(3)
+    counts: dict[str, int] = {}
+    for entry in saved:
+        key = entry.get("cuisine") or "Any"
+        counts[key] = counts.get(key, 0) + 1
 
-    with col1:
-        difficulty = st.select_slider("Difficulty", ["Easy", "Normal", "Hard"], "Normal")
+    left, right = st.columns(2, gap="large")
+    with left:
+        st.markdown("**Recipes by cuisine**")
+        st.bar_chart(pd.DataFrame({"recipes": counts}), color="#FF6B35", height=190)
+    with right:
+        st.markdown("**Recently saved**")
+        for entry in saved[:5]:
+            st.write(f"- {entry['title']}  ·  {entry['saved_at'][:10]}")
 
-    with col2:
-        cooking_time = st.slider("Max time (min)", 10, 120, 30, 10)
 
-    with col3:
-        servings = st.number_input("Servings", 1, 10, 4)
+def page_recognize() -> None:
+    card("Recognize ingredients", "Upload a fridge photo and let the AI name what it sees.")
+    uploaded = st.file_uploader(
+        "Upload a fridge photo", type=list(Config.ALLOWED_EXTENSIONS), label_visibility="collapsed"
+    )
+    if uploaded is None:
+        return
+    ok, message = ImageProcessor.validate(uploaded)
+    if not ok:
+        st.error(message)
+        return
 
-    if st.button("🍳 Generate Recipes", type="primary", use_container_width=True):
-        generate_recipes(current_ingredients, {
-            'difficulty': difficulty,
-            'cooking_time': f"{cooking_time} minutes",
-            'servings': servings
-        })
+    left, right = st.columns(2, gap="large")
+    with left:
+        st.image(uploaded, use_container_width=True)
+        if st.button("Recognize ingredients", type="primary", use_container_width=True):
+            with st.spinner("The AI is looking at your fridge..."):
+                try:
+                    image_bytes, mime = ImageProcessor.prepare(uploaded)
+                    answer = OpenRouterClient().recognize_ingredients(image_bytes, mime)
+                    parsed = parse_ingredients(answer)
+                    st.session_state["ingredients"] = [i for items in parsed.values() for i in items]
+                    st.session_state["ingredient_groups"] = parsed
+                except OpenRouterError as exc:
+                    st.error(str(exc))
+    with right:
+        groups = st.session_state.get("ingredient_groups", {})
+        if groups:
+            category_grid(groups)
 
-    # Display generated recipes
-    if st.session_state.generated_recipes:
-        display_generated_recipes_with_save()
 
-def show_my_recipes():
-    """Show saved recipes page"""
-    st.header("📚 My Recipes")
+def page_create(email: str) -> None:
+    card("Create a recipe", "Turn the ingredients you have into something you can cook tonight.")
+    ingredients = st.session_state.get("ingredients", [])
+    if not ingredients:
+        st.info("Recognize a fridge photo first, or type ingredients below.")
+        typed = st.text_input("Ingredients (comma separated)")
+        if typed:
+            ingredients = [item.strip() for item in typed.split(",") if item.strip()]
+            st.session_state["ingredients"] = ingredients
+    if not ingredients:
+        return
 
-    user_id = st.session_state.user['id']
-    profile_manager = st.session_state.profile_manager
+    st.caption("Using: " + ", ".join(ingredients[:12]))
+    profile = get_profiles().get_profile(email)
 
-    # Folder selection
-    folders = profile_manager.get_folders(user_id)
-    folder_names = [f['name'] for f in folders]
+    c1, c2, c3 = st.columns(3)
+    cuisine = c1.selectbox("Cuisine", CUISINES, index=CUISINES.index(profile.get("favorite_cuisine", "Any")))
+    difficulty = c2.selectbox("Difficulty", DIFFICULTIES)
+    max_time = c3.slider("Max time (min)", 10, 90, 30, step=5)
 
-    selected_folder = st.selectbox("Select Folder", folder_names)
+    if st.button("Generate recipes", type="primary", use_container_width=True):
+        with st.spinner("Writing recipes..."):
+            try:
+                st.session_state["recipes"] = RecipeGenerator().generate(
+                    ingredients,
+                    cuisine=cuisine,
+                    difficulty=difficulty,
+                    max_time=max_time,
+                    servings=profile.get("household_size", 2),
+                )
+            except OpenRouterError as exc:
+                st.error(str(exc))
 
-    # Get saved recipes
-    saved_recipes = profile_manager.get_saved_recipes(user_id, selected_folder)
+    for index, recipe in enumerate(st.session_state.get("recipes", [])):
+        recipe_card(
+            recipe.title,
+            [recipe.cuisine, recipe.difficulty, f"{recipe.time_minutes} min"],
+            recipe.ingredients,
+            recipe.steps,
+            recipe.tip,
+        )
+        if st.button("Save to my recipes", key=f"save_{index}", use_container_width=True):
+            recipe_id = get_profiles().save_recipe(email, recipe)
+            st.success(f"Saved as {recipe_id}. Open **My recipes** to see it.")
 
-    if saved_recipes:
-        for saved in saved_recipes:
-            recipe = saved['recipe']
-            save_id = saved['save_id']
 
-            with st.expander(f"**{recipe.get('name', 'Untitled Recipe')}**"):
-                col1, col2 = st.columns([3, 1])
+def page_my_recipes(email: str) -> None:
+    card("My recipes", "Rate them, mark them cooked, and keep the ones that worked.")
+    profiles = get_profiles()
+    saved = profiles.list_saved(email)
+    if not saved:
+        st.info("Nothing saved yet.")
+        return
 
-                with col1:
-                    st.write(f"Difficulty: {recipe.get('difficulty', 'Normal')}")
-                    st.write(f"Time: {recipe.get('time', 30)} min")
+    # A list, not a stack of full recipes: the point of this page is rating and
+    # tracking, so those controls sit next to each title and the recipe itself
+    # stays folded away until you want it.
+    for entry in saved:
+        head, rate_col, cook_col = st.columns([4, 2, 1.4], gap="medium")
+        with head:
+            meta = " &middot; ".join(
+                str(p) for p in [
+                    entry.get("cuisine"),
+                    entry.get("difficulty"),
+                    f"{entry.get('time_minutes', 0)} min",
+                    f"saved {entry['saved_at'][:10]}",
+                ] if p
+            )
+            st.markdown(
+                f"<div class='fc-row'><b>{entry['title']}</b><span>{meta}</span></div>",
+                unsafe_allow_html=True,
+            )
+        with rate_col:
+            rating = st.slider(
+                "Rating", 0, 5, int(entry.get("rating", 0)), key=f"rate_{entry['id']}"
+            )
+            if rating != entry.get("rating", 0):
+                profiles.update_saved(email, entry["id"], rating=rating)
+        with cook_col:
+            st.write("")
+            if entry.get("cooked"):
+                st.success("Cooked")
+            elif st.button("Mark as cooked", key=f"cook_{entry['id']}", use_container_width=True):
+                profiles.update_saved(email, entry["id"], cooked=True)
+                st.rerun()
 
-                    # Note section
-                    note = st.text_area(
-                        "Notes",
-                        value=saved.get('notes', ''),
-                        key=f"note_{save_id}"
-                    )
+        with st.expander("Show the recipe"):
+            left, right = st.columns(2)
+            left.markdown("**Ingredients**")
+            for item in entry.get("ingredients", []):
+                left.write(f"- {item}")
+            right.markdown("**Steps**")
+            for number, step in enumerate(entry.get("steps", []), start=1):
+                right.write(f"{number}. {step}")
 
-                    if st.button("Save Note", key=f"save_note_{save_id}"):
-                        profile_manager.update_recipe_note(user_id, save_id, note)
-                        st.success("Note saved")
 
-                with col2:
-                    # Rating
-                    rating = st.slider(
-                        "Rating",
-                        1, 5,
-                        value=saved.get('rating', 3),
-                        key=f"rating_{save_id}"
-                    )
-
-                    if st.button("Save Rating", key=f"save_rating_{save_id}"):
-                        profile_manager.rate_recipe(user_id, save_id, rating)
-                        st.success("Rating saved")
-
-                    # Mark as cooked
-                    if st.button("Mark as Cooked", key=f"cooked_{save_id}"):
-                        profile_manager.mark_as_cooked(user_id, save_id)
-                        st.success("Marked as cooked!")
-
-                    # Delete
-                    if st.button("Delete", key=f"delete_{save_id}"):
-                        profile_manager.delete_saved_recipe(user_id, save_id)
-                        st.rerun()
-    else:
-        st.info("No saved recipes yet")
-
-def show_profile():
-    """Show user profile page"""
-    st.header("👤 Profile Settings")
-
-    user = st.session_state.user
-    user_id = user['id']
-    profile_manager = st.session_state.profile_manager
-
-    # Get current profile
-    profile = profile_manager.get_profile(user_id) or user.get('profile', {})
+def page_profile(email: str) -> None:
+    card("Profile", "Your preferences shape every recipe the AI writes for you.")
+    profiles = get_profiles()
+    profile = profiles.get_profile(email)
 
     with st.form("profile_form"):
-        col1, col2 = st.columns(2)
+        nickname = st.text_input("Nickname", profile.get("nickname", ""))
+        c1, c2 = st.columns(2)
+        skill = c1.selectbox(
+            "Cooking level",
+            ["Beginner", "Intermediate", "Advanced"],
+            index=["Beginner", "Intermediate", "Advanced"].index(profile.get("skill_level", "Beginner")),
+        )
+        household = c2.slider("Household size", 1, 8, int(profile.get("household_size", 2)))
+        favorite = st.selectbox(
+            "Favorite cuisine", CUISINES, index=CUISINES.index(profile.get("favorite_cuisine", "Any"))
+        )
+        dietary = st.multiselect("Dietary preferences", DIETARY, default=profile.get("dietary", []))
+        allergies = st.text_input("Allergies", profile.get("allergies", ""))
 
-        with col1:
-            nickname = st.text_input("Nickname", value=profile.get('nickname', user['username']))
-            bio = st.text_area("Bio", value=profile.get('bio', ''))
-            cooking_level = st.select_slider(
-                "Cooking Skill",
-                ["Beginner", "Intermediate", "Advanced", "Expert"],
-                value=profile.get('cooking_level', 'Beginner')
+        if st.form_submit_button("Save profile", type="primary", use_container_width=True):
+            profiles.save_profile(
+                email,
+                {
+                    "nickname": nickname,
+                    "skill_level": skill,
+                    "household_size": household,
+                    "favorite_cuisine": favorite,
+                    "dietary": dietary,
+                    "allergies": allergies,
+                },
             )
+            st.success("Profile saved.")
 
-        with col2:
-            household = st.number_input("Household Size", 1, 10, profile.get('household_size', 2))
-            cuisine = st.multiselect(
-                "Favorite Cuisines",
-                ["Korean", "Chinese", "Japanese", "Western", "Southeast Asian"],
-                default=profile.get('favorite_cuisine', ['Korean'])
-            )
-            dietary = st.multiselect(
-                "Dietary Restrictions",
-                ["Vegetarian", "Vegan", "Gluten-Free", "Low-Sodium", "Low-Sugar"],
-                default=profile.get('dietary_preferences', [])
-            )
-            allergies = st.multiselect(
-                "Allergies",
-                ["Peanuts", "Milk", "Eggs", "Wheat", "Shellfish"],
-                default=profile.get('allergies', [])
-            )
 
-        submit = st.form_submit_button("Save Profile", type="primary", use_container_width=True)
+# --------------------------------------------------------------------- #
+# main
+# --------------------------------------------------------------------- #
+def main() -> None:
+    if "user" not in st.session_state:
+        login_screen()
+        return
 
-    if submit:
-        profile_data = {
-            'nickname': nickname,
-            'bio': bio,
-            'cooking_level': cooking_level,
-            'household_size': household,
-            'favorite_cuisine': cuisine,
-            'dietary_preferences': dietary,
-            'allergies': allergies
-        }
+    email = st.session_state["user"]
+    nickname = st.session_state.get("nickname", email)
 
-        profile_manager.create_profile(user_id, profile_data)
-        st.success("Profile saved!")
+    with st.sidebar:
+        st.markdown("### 🍳 FridgeChef")
+        st.caption(f"Signed in as **{nickname}**")
+        st.divider()
+        page = st.radio(
+            "Go to",
+            ["Dashboard", "Recognize ingredients", "Create recipe", "My recipes", "Profile"],
+            label_visibility="collapsed",
+        )
+        st.divider()
+        if st.button("Log out", use_container_width=True):
+            st.session_state.clear()
+            st.rerun()
 
-def show_recommendations():
-    """Show personalized recommendations"""
-    st.header("🎯 Personalized Recommendations")
-
-    user_id = st.session_state.user['id']
-    profile_manager = st.session_state.profile_manager
-
-    # Get recommendations
-    recommendations = profile_manager.get_recommendations(user_id, limit=6)
-
-    if recommendations:
-        st.subheader("Recipes Recommended for You")
-
-        cols = st.columns(3)
-        for idx, recipe in enumerate(recommendations):
-            with cols[idx % 3]:
-                st.write(f"**{recipe['name']}**")
-                st.caption(f"⏱️ {recipe['time']} min | ⭐ {recipe['difficulty']}")
-                st.caption(f"🍽️ {recipe['cuisine']}")
-
-                if st.button("Details", key=f"rec_{idx}"):
-                    st.info("Viewing recipe details...")
+    if page == "Dashboard":
+        page_dashboard(email)
+    elif page == "Recognize ingredients":
+        page_recognize()
+    elif page == "Create recipe":
+        page_create(email)
+    elif page == "My recipes":
+        page_my_recipes(email)
     else:
-        st.info("Complete your profile to receive personalized recommendations")
+        page_profile(email)
 
-# Helper functions
+    st.divider()
+    st.caption(f"{Config.APP_NAME} v{Config.APP_VERSION} - Step 3")
 
-def logout():
-    """Logout user"""
-    auth = st.session_state.auth_manager
-    if st.session_state.token:
-        auth.logout(st.session_state.token)
-
-    st.session_state.user = None
-    st.session_state.token = None
-    st.rerun()
-
-def recognize_ingredients(uploaded_file):
-    """Recognize ingredients from image"""
-    try:
-        processor = ImageProcessor()
-        image_base64 = processor.process_image(uploaded_file)
-
-        client = OpenRouterClient()
-        with st.spinner("Recognizing ingredients..."):
-            result = client.recognize_ingredients(image_base64)
-
-        if result.get('status') == 'success':
-            st.session_state.recognized_ingredients = result
-
-            # Set ingredients in manager
-            manager = st.session_state.ingredient_manager
-            manager.set_ingredients(result.get('ingredients', {}))
-
-            st.success(f"✅ Recognized {result.get('total_items', 0)} ingredients!")
-            st.balloons()
-
-    except Exception as e:
-        st.error(f"Error: {str(e)}")
-
-def display_recognized_ingredients():
-    """Display recognized ingredients"""
-    result = st.session_state.recognized_ingredients
-    ingredients = result.get('ingredients', {})
-
-    for category, items in ingredients.items():
-        if items:
-            st.write(f"**{category}**")
-            for item in items:
-                st.write(f"• {item}")
-
-def generate_recipes(ingredients, preferences):
-    """Generate recipes"""
-    generator = RecipeGenerator()
-
-    with st.spinner("Generating recipes..."):
-        result = generator.generate_recipes(ingredients, preferences)
-
-    if result.get('status') == 'success':
-        st.session_state.generated_recipes = result
-        st.success(f"✅ Generated {len(result['recipes'])} recipes!")
-
-def display_generated_recipes_with_save():
-    """Display generated recipes with save option"""
-    result = st.session_state.generated_recipes
-    recipes = result.get('recipes', [])
-
-    user_id = st.session_state.user['id']
-    profile_manager = st.session_state.profile_manager
-
-    for idx, recipe in enumerate(recipes, 1):
-        with st.expander(f"**{recipe['name']}**", expanded=(idx == 1)):
-            col1, col2 = st.columns([3, 1])
-
-            with col1:
-                st.write(f"Difficulty: {recipe.get('difficulty', 'Normal')}")
-                st.write(f"Time: {recipe.get('time', 30)} min")
-                st.write(f"Calories: {recipe.get('calories', 0)}kcal")
-
-            with col2:
-                if st.button(f"💾 Save", key=f"save_recipe_{idx}"):
-                    save_id = profile_manager.save_recipe(user_id, recipe)
-                    st.success(f"Recipe saved! (ID: {save_id})")
 
 if __name__ == "__main__":
     main()

@@ -1,105 +1,104 @@
-"""
-OpenRouter API client for AI model interactions
-"""
+"""Thin client for the OpenRouter chat-completions API."""
+from __future__ import annotations
+
+import base64
+from typing import Any
+
 import requests
-import json
-import time
-from typing import Dict, List, Optional
-from backend.config import Config
+
+from .config import Config
+
+
+class OpenRouterError(RuntimeError):
+    """Raised when the OpenRouter API returns an error."""
+
 
 class OpenRouterClient:
-    """Client for OpenRouter API"""
+    """Sends chat and vision requests to OpenRouter."""
 
-    def __init__(self):
+    def __init__(self) -> None:
+        Config.validate()
         self.api_key = Config.OPENROUTER_API_KEY
         self.base_url = Config.OPENROUTER_BASE_URL
-        self.headers = {
+
+    def _headers(self) -> dict[str, str]:
+        return {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
-            "HTTP-Referer": "http://localhost:8501",
-            "X-Title": Config.APP_NAME
+            "HTTP-Referer": Config.APP_URL,
+            "X-Title": Config.APP_NAME,
         }
 
-    def chat_completion(self, messages: List[Dict], model: str = None, max_retries: int = 3) -> Optional[Dict]:
+    def chat(
+        self,
+        messages: list[dict[str, Any]],
+        model: str,
+        max_tokens: int = 1200,
+        temperature: float = 0.3,
+    ) -> str:
+        """Send messages to a model and return the assistant text.
+
+        Free models drift into stray characters at high temperatures, so the
+        default is deliberately low.
         """
-        Send chat completion request to OpenRouter API
+        try:
+            response = requests.post(
+                f"{self.base_url}/chat/completions",
+                headers=self._headers(),
+                json={
+                    "model": model,
+                    "messages": messages,
+                    "max_tokens": max_tokens,
+                    "temperature": temperature,
+                },
+                timeout=Config.REQUEST_TIMEOUT,
+            )
+        except requests.RequestException as exc:
+            raise OpenRouterError(f"Could not reach OpenRouter: {exc}") from exc
 
-        Args:
-            messages: List of message dictionaries
-            model: Model to use (defaults to image recognition model)
-            max_retries: Maximum number of retry attempts
+        if response.status_code == 401:
+            raise OpenRouterError("Invalid API key. Check OPENROUTER_API_KEY in your .env file.")
+        if response.status_code == 429:
+            raise OpenRouterError("Free-tier limit reached. Wait a moment and try again.")
+        if not response.ok:
+            raise OpenRouterError(f"OpenRouter returned {response.status_code}: {response.text[:200]}")
 
-        Returns:
-            API response dictionary or None if failed
+        payload = response.json()
+        choices = payload.get("choices") or []
+        if not choices:
+            raise OpenRouterError("The model returned an empty response.")
+        return (choices[0]["message"].get("content") or "").strip()
+
+    def test_connection(self) -> str:
+        """One-line smoke test used by the sidebar button.
+
+        The recipe model is a reasoning model, so it spends some of the token
+        budget on internal reasoning. Keep the budget generous even for a
+        one-word answer.
         """
-        if model is None:
-            model = Config.IMAGE_RECOGNITION_MODEL
+        return self.chat(
+            [{"role": "user", "content": "Reply with the single word: ready."}],
+            model=Config.RECIPE_GENERATION_MODEL,
+            max_tokens=200,
+        )
 
-        endpoint = f"{self.base_url}/chat/completions"
-
-        data = {
-            "model": model,
-            "messages": messages,
-            "temperature": 0.7,
-            "max_tokens": 1000
-        }
-
-        for attempt in range(max_retries):
-            try:
-                response = requests.post(
-                    endpoint,
-                    headers=self.headers,
-                    json=data,
-                    timeout=Config.REQUEST_TIMEOUT
-                )
-
-                if response.status_code == 200:
-                    return response.json()
-
-                elif response.status_code == 429:  # Rate limit
-                    wait_time = 2 ** attempt  # Exponential backoff
-                    print(f"Rate limited. Waiting {wait_time} seconds...")
-                    time.sleep(wait_time)
-                    continue
-
-                else:
-                    print(f"API Error: {response.status_code} - {response.text}")
-                    if attempt < max_retries - 1:
-                        time.sleep(1)
-                        continue
-
-            except requests.exceptions.RequestException as e:
-                print(f"Request failed (attempt {attempt + 1}/{max_retries}): {e}")
-                if attempt < max_retries - 1:
-                    time.sleep(1)
-                    continue
-
-        return None
-
-    def recognize_ingredients(self, image_base64: str) -> Dict:
-        """
-        Recognize ingredients from an image using Llama-4 model
-
-        Args:
-            image_base64: Base64 encoded image
-
-        Returns:
-            Dictionary with recognized ingredients
-        """
-        prompt = """You are analyzing a refrigerator image. Please identify all visible food ingredients.
-
-Instructions:
-1. List each ingredient you can clearly see
-2. Group similar items together
-3. Include approximate quantities when visible
-4. Categorize by type (vegetables, fruits, meat, dairy, condiments, etc.)
-
-Output Format:
-Category: [Category Name]
-- [Ingredient]: [Quantity if visible]
-
-Be specific and accurate. Only list items you're confident about."""
-
+    def recognize_ingredients(self, image_bytes: bytes, mime_type: str = "image/jpeg") -> str:
+        """Ask the vision model to list the ingredients it can see."""
+        encoded = base64.b64encode(image_bytes).decode()
+        prompt = (
+            "You are looking at a photo of the inside of a refrigerator. "
+            "List the food ingredients you can identify, grouped by category "
+            "(Vegetables, Fruits, Dairy & Eggs, Meat & Seafood, Condiments, Beverages). "
+            "Use this exact format, one category per block:\n\n"
+            "## Category\n- ingredient\n- ingredient\n\n"
+            "Rules:\n"
+            "- Use the common English name of the food, one to three words "
+            "(for example: carrots, spring onion, cheddar cheese).\n"
+            "- Skip anything you cannot name confidently. Never write vague "
+            "entries such as 'unknown item', 'pink liquid' or 'container of food'.\n"
+            "- Only list categories that actually have items.\n"
+            "- Plain English only. No commentary, no notes, no other alphabets."
+        )
         messages = [
             {
                 "role": "user",
@@ -107,74 +106,14 @@ Be specific and accurate. Only list items you're confident about."""
                     {"type": "text", "text": prompt},
                     {
                         "type": "image_url",
-                        "image_url": {
-                            "url": f"data:image/jpeg;base64,{image_base64}"
-                        }
-                    }
-                ]
+                        "image_url": {"url": f"data:{mime_type};base64,{encoded}"},
+                    },
+                ],
             }
         ]
-
-        response = self.chat_completion(messages, model=Config.IMAGE_RECOGNITION_MODEL)
-
-        if response and 'choices' in response:
-            content = response['choices'][0]['message']['content']
-            return self._parse_ingredients(content)
-
-        return {"error": "Failed to recognize ingredients", "ingredients": {}}
-
-    def _parse_ingredients(self, text: str) -> Dict:
-        """
-        Parse the AI response into structured ingredient data
-
-        Args:
-            text: Raw text response from AI
-
-        Returns:
-            Structured dictionary of ingredients by category
-        """
-        ingredients = {}
-        current_category = None
-
-        lines = text.strip().split('\n')
-
-        for line in lines:
-            line = line.strip()
-
-            # Check if it's a category line
-            if line.startswith('Category:') or ':' in line and not line.startswith('-'):
-                category = line.split(':')[1].strip() if ':' in line else line
-                current_category = category
-                ingredients[current_category] = []
-
-            # Check if it's an ingredient line
-            elif line.startswith('-') or line.startswith('•'):
-                if current_category:
-                    ingredient = line.lstrip('-•').strip()
-                    ingredients[current_category].append(ingredient)
-
-            # Handle ingredients without clear formatting
-            elif line and current_category and not line.lower().startswith(('category', 'instructions')):
-                ingredients[current_category].append(line)
-
-        # Remove empty categories
-        ingredients = {k: v for k, v in ingredients.items() if v}
-
-        return {
-            "status": "success",
-            "ingredients": ingredients,
-            "raw_text": text,
-            "total_items": sum(len(items) for items in ingredients.values())
-        }
-
-    def test_connection(self) -> bool:
-        """Test API connection"""
-        try:
-            response = requests.get(
-                f"{self.base_url}/models",
-                headers=self.headers,
-                timeout=10
-            )
-            return response.status_code == 200
-        except:
-            return False
+        return self.chat(
+            messages,
+            model=Config.IMAGE_RECOGNITION_MODEL,
+            max_tokens=800,
+            temperature=0.2,
+        )

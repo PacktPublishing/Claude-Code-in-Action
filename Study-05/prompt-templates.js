@@ -2,7 +2,7 @@
  * Prompt Engineering Templates for Text Summarization
  *
  * This module contains carefully crafted prompt templates optimized for
- * DeepSeek V3.1 model to achieve high-quality text summarization results.
+ * gpt-oss-20b model to achieve high-quality text summarization results.
  *
  * Features:
  * - Multiple template variations for different content types
@@ -482,10 +482,10 @@ Please write a reliable and balanced summary through critical analysis.`;
     /**
      * Optimize prompt for specific model
      */
-    optimizeForModel(promptSet, modelName = 'deepseek') {
-        // DeepSeek specific optimizations
-        if (modelName.includes('deepseek')) {
-            // DeepSeek responds well to structured instructions
+    optimizeForModel(promptSet, modelName = 'gpt-oss') {
+        // gpt-oss specific optimizations
+        if (modelName.includes('gpt-oss')) {
+            // gpt-oss responds well to structured instructions
             promptSet.messages[0].content = promptSet.messages[0].content
                 .replace(/\*\*(.*?)\*\*/g, '【$1】'); // Use different emphasis markers
 

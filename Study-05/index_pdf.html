@@ -747,11 +747,11 @@
                     <input type="file" id="fileInput" class="file-input" accept=".pdf" aria-label="Select PDF file">
                 </div>
                 <div style="text-align: center; margin-top: 15px;">
-                    <a href="korean-spelling.pdf"
-                       download="korean-spelling.pdf"
+                    <a href="ai-assistant-guide.pdf"
+                       download="ai-assistant-guide.pdf"
                        class="btn btn-secondary"
                        style="padding: 8px 20px; display: inline-block; text-decoration: none;">
-                        📄 Download Sample PDF (Korean spelling guide)
+                        📄 Download the sample PDF
                     </a>
                 </div>
 
@@ -859,7 +859,7 @@
 
                 <label for="modelSelect" class="form-label">AI Model</label>
                 <select id="modelSelect" class="form-select">
-                    <option value="deepseek/deepseek-chat">DeepSeek V3.1 (free)</option>
+                    <option value="openai/gpt-oss-20b:free">gpt-oss-20b (free)</option>
                     <option value="google/gemini-2.0-flash-exp:free">Gemini 2.0 Flash (free)</option>
                 </select>
                 <p class="form-hint">Choose the AI model to use</p>
@@ -891,7 +891,7 @@
             summaryMode: 'normal',
             isProcessing: false,
             apiKey: localStorage.getItem('openrouter_api_key') || '[OpenRouter API key]',
-            selectedModel: localStorage.getItem('selected_model') || 'deepseek/deepseek-chat',
+            selectedModel: localStorage.getItem('selected_model') || 'openai/gpt-oss-20b:free',
             theme: localStorage.getItem('theme') || 'light'
         };
 
@@ -1148,7 +1148,7 @@ Key Points:
 • This is a demo summary
 • To get a real AI summary, set your API key
 • Click the settings button (⚙️) and enter your OpenRouter API key
-• The DeepSeek V3.1 model is free to use
+• The gpt-oss-20b model is free to use
 • Connect the real API for more detailed summaries`;
 
             return demoSummary;

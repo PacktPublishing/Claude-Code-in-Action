@@ -1,6 +1,6 @@
 /**
  * Empathy AI Diary Backend
- * Uses the DeepSeek V3.1 model via the OpenRouter API for emotion analysis and empathetic message generation
+ * Uses the gpt-oss-20b model via the OpenRouter API for emotion analysis and empathetic message generation
  */
 
 class EmpathyDiaryBackend {
@@ -8,7 +8,7 @@ class EmpathyDiaryBackend {
         // Get the API key from environment variables (important for security)
         this.apiKey = this.getApiKey();
         this.baseUrl = 'https://openrouter.ai/api/v1';
-        this.model = 'google/gemma-4-26b-a4b-it:free';
+        this.model = 'openai/gpt-oss-20b:free';
 
         // CORS proxy options (used when needed)
         this.corsProxies = [
@@ -56,7 +56,7 @@ class EmpathyDiaryBackend {
     }
 
     /**
-     * Create the emotion analysis prompt for the DeepSeek model
+     * Create the emotion analysis prompt for the gpt-oss model
      */
     createEmotionAnalysisPrompt(diaryText) {
         return `You are a warm and empathetic AI counselor. Read the following diary entry, analyze the emotion, and write an empathetic message. Respond in English.
@@ -114,7 +114,7 @@ EmpathyMessage: It sounds like you had a hard day. Feeling this way is completel
 
             return {
                 emotion: emotionMapping[emotion] || emotion.toLowerCase(),
-                emotionKorean: emotion,
+                emotionLabel: emotion,
                 empathyMessage: empathyMessage,
                 emotionScore: emotionScore
             };
@@ -123,7 +123,7 @@ EmpathyMessage: It sounds like you had a hard day. Feeling this way is completel
             // Return default values if parsing fails
             return {
                 emotion: 'mixed',
-                emotionKorean: 'Mixed',
+                emotionLabel: 'Mixed',
                 empathyMessage: 'Thank you for sharing this precious diary entry. I understand your feelings and experiences, and I am always cheering for you.',
                 emotionScore: 5
             };
@@ -142,7 +142,9 @@ EmpathyMessage: It sounds like you had a hard day. Feeling this way is completel
                     content: prompt
                 }
             ],
-            max_tokens: 500,
+            // gpt-oss is a reasoning model: it spends part of the budget
+            // thinking before it writes, so keep this generous.
+            max_tokens: 1500,
             temperature: 0.7
         };
 
@@ -214,7 +216,7 @@ EmpathyMessage: It sounds like you had a hard day. Feeling this way is completel
                     console.log('Emotion analysis complete (serverless):', data);
                     return {
                         emotion: data.emotion,
-                        emotionKorean: data.emotionKorean,
+                        emotionLabel: data.emotionLabel,
                         empathyMessage: data.empathyMessage,
                         emotionScore: data.emotionScore
                     };
@@ -262,9 +264,13 @@ EmpathyMessage: It sounds like you had a hard day. Feeling this way is completel
             }
         }
 
-        // Fallback logic when every attempt has failed
-        console.error('All API call methods failed. Using local analysis.');
-        return this.fallbackAnalysis(diaryText);
+        // Every attempt failed. Say so plainly rather than quietly returning a
+        // keyword guess dressed up as an AI analysis.
+        throw new Error(
+            'The emotion analysis service could not be reached. ' +
+            'The free tier allows a limited number of requests per minute, ' +
+            'so please wait a moment and try again.'
+        );
     }
 
     /**
@@ -297,7 +303,7 @@ EmpathyMessage: It sounds like you had a hard day. Feeling this way is completel
             }
         }
 
-        const emotionKoreanMap = {
+        const emotionLabelMap = {
             joy: 'Joy',
             sadness: 'Sadness',
             anger: 'Anger',
@@ -319,7 +325,7 @@ EmpathyMessage: It sounds like you had a hard day. Feeling this way is completel
 
         return {
             emotion: detectedEmotion,
-            emotionKorean: emotionKoreanMap[detectedEmotion],
+            emotionLabel: emotionLabelMap[detectedEmotion],
             empathyMessage: empathyMessages[detectedEmotion],
             emotionScore: Math.min(maxScore + 3, 10) // Adjusted to the 3-10 range
         };

@@ -71,3 +71,9 @@ tmp/
 /CLAUDE.md
 **/.claude/settings.json
 **/.claude/settings.local.json
+# Local run artifacts (not part of the book)
+_backup-before-*/
+Study-04/recipes.db
+Study-04/saved_recipes.json
+Study-04/users.json
+Study-04/data/temp/

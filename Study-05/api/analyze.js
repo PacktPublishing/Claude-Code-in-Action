@@ -79,14 +79,16 @@ Empathy Message: It sounds like you had a hard day. Feeling this way is complete
                 'X-Title': 'Empathy Diary App'
             },
             body: JSON.stringify({
-                model: 'google/gemma-4-26b-a4b-it:free',
+                model: 'openai/gpt-oss-20b:free',
                 messages: [
                     {
                         role: 'user',
                         content: prompt
                     }
                 ],
-                max_tokens: 500,
+                // gpt-oss is a reasoning model: it spends part of the budget
+                // thinking before it writes, so keep this generous.
+                max_tokens: 1500,
                 temperature: 0.7
             })
         });
@@ -157,7 +159,7 @@ function parseApiResponse(responseText) {
 
         return {
             emotion: emotionMapping[emotion] ? emotion : 'mixed',
-            emotionKorean: emotionMapping[emotion] || 'Mixed', // display label (field name kept for frontend compatibility)
+            emotionLabel: emotionMapping[emotion] || 'Mixed',
             empathyMessage: empathyMessage,
             emotionScore: emotionScore
         };
@@ -166,7 +168,7 @@ function parseApiResponse(responseText) {
         // Return default response on parsing failure
         return {
             emotion: 'mixed',
-            emotionKorean: 'Mixed',
+            emotionLabel: 'Mixed',
             empathyMessage: 'Thank you for sharing your precious diary entry. I understand your feelings and experiences, and I am always here cheering for you.',
             emotionScore: 5
         };

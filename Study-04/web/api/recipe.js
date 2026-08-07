@@ -73,7 +73,7 @@ export default async function handler(req, res) {
         }
 
         const requestBody = {
-            model: 'google/gemini-3-flash-preview',
+            model: 'openai/gpt-oss-20b:free',
             messages: [
                 {
                     role: "user",

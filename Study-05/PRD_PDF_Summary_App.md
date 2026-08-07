@@ -125,11 +125,11 @@ Build an intuitive, efficient web application that lets users easily upload a PD
 - [ ] Clear error message shown when extraction fails
 
 #### 4.1.3 AI Summarization
-**Description**: Generates a document summary with the DeepSeek V3.1 model via the OpenRouter API
+**Description**: Generates a document summary with the gpt-oss-20b model via the OpenRouter API
 
 **Detailed requirements**:
 - Integrate with the OpenRouter API
-- Use the DeepSeek V3.1 model
+- Use the gpt-oss-20b model
 - Apply prompts optimized for Korean summarization
 - Summary length: about 10-20% of the original
 - Summaries focused on core content and key points
@@ -275,7 +275,7 @@ const API_KEY = process.env.OPENROUTER_API_KEY || '';
 
 **External services**:
 - OpenRouter API: AI summarization service
-- DeepSeek V3.1: language model
+- gpt-oss-20b: language model
 
 **Development tools**:
 - VS Code: development environment
@@ -311,7 +311,7 @@ const apiCall = {
     'Content-Type': 'application/json'
   },
   body: {
-    model: 'deepseek/deepseek-chat',
+    model: 'openai/gpt-oss-20b:free',
     messages: [
       {
         role: 'system',
@@ -644,7 +644,7 @@ const apiCall = {
 - **PDF**: Portable Document Format
 - **AI summarization**: automatic document summarization using artificial intelligence
 - **OpenRouter**: an AI model API service platform
-- **DeepSeek V3.1**: the name of the language model
+- **gpt-oss-20b**: the name of the language model
 - **pdf.js**: a JavaScript PDF processing library developed by Mozilla
 
 ---

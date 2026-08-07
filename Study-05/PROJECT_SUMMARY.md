@@ -2,7 +2,7 @@
 
 ## 🎯 Project Overview
 
-We successfully built an advanced PDF document summarization web application powered by the OpenRouter API and the DeepSeek V3.1 model. The system includes everything needed for real-world production use: Korean-language optimization, real-time streaming, intelligent text chunking, and robust error handling.
+We successfully built an advanced PDF document summarization web application powered by the OpenRouter API and the gpt-oss-20b model. The system includes everything needed for real-world production use: Korean-language optimization, real-time streaming, intelligent text chunking, and robust error handling.
 
 ## 🏗️ System Architecture
 
@@ -24,7 +24,7 @@ pdf-summarization-system/
 ## ⭐ Key Features
 
 ### 1. 🔌 OpenRouter API Client (`openrouter-client.js`)
-- **Optimized for DeepSeek V3.1**: leverages a high-performance language model
+- **Optimized for gpt-oss-20b**: leverages a high-performance language model
 - **Automatic retry logic**: reliable requests via exponential backoff with jitter
 - **Circuit breaker pattern**: failure isolation to protect the system
 - **Rate limiting**: automatic throttling of API request volume

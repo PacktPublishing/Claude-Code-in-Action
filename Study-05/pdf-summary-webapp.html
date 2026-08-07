@@ -1335,8 +1335,8 @@
                 <div class="form-group">
                     <label for="model-select">AI Model Selection</label>
                     <select id="model-select" class="form-control">
-                        <option value="deepseek/deepseek-chat">DeepSeek V3.1 (Recommended)</option>
-                        <option value="deepseek/deepseek-coder">DeepSeek Coder</option>
+                        <option value="openai/gpt-oss-20b:free">gpt-oss-20b (Recommended)</option>
+                        <option value="openai/gpt-oss-20b:free">gpt-oss-20b</option>
                         <option value="google/gemini-flash-1.5">Gemini 1.5 Flash</option>
                         <option value="anthropic/claude-3-haiku">Claude 3 Haiku</option>
                     </select>
@@ -1369,7 +1369,7 @@
             isProcessing: false,
             theme: 'light',
             apiKey: '',
-            selectedModel: 'deepseek/deepseek-chat',
+            selectedModel: 'openai/gpt-oss-20b:free',
             apiClient: null,
             maxFileSize: 50 * 1024 * 1024, // 50MB configurable limit
             supportedFileTypes: ['application/pdf'],
@@ -1381,7 +1381,7 @@
             constructor(config = {}) {
                 this.apiKey = config.apiKey || '';
                 this.baseUrl = config.baseUrl || 'https://openrouter.ai/api/v1';
-                this.model = config.model || 'deepseek/deepseek-chat';
+                this.model = config.model || 'openai/gpt-oss-20b:free';
                 this.maxRetries = config.maxRetries || 3;
                 this.retryDelay = config.retryDelay || 1000;
                 this.requestTimeout = config.requestTimeout || 60000;

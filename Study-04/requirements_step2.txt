@@ -1,8 +1,5 @@
-# Step 2 Requirements (includes Step 1)
-streamlit>=1.29.0
-python-dotenv>=1.0.0
-requests>=2.31.0
-Pillow>=10.0.0
-pandas>=2.1.0
-plotly>=5.18.0
-sqlite3
+python-dotenv>=1.0.1
+requests>=2.32.0
+Pillow>=10.4.0
+streamlit>=1.38.0
+pandas>=2.2.0

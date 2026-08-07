@@ -1,25 +1,23 @@
-# CLAUDE.md
+# FridgeChef
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+A Streamlit web app that recognizes ingredients in a fridge photo and generates recipes using free models on OpenRouter.
 
-## Project Overview
+## Stack
 
-This is Study-04 in the VibeCoding project series. The repository is currently empty and awaiting initial implementation.
+- **Image recognition**: `google/gemma-4-26b-a4b-it:free` (via OpenRouter)
+- **Recipe generation**: `openai/gpt-oss-20b:free` (via OpenRouter)
+- **UI**: Streamlit
+- **Storage**: SQLite (recipes) + JSON files (users, profiles, saved recipes)
 
-## Development Setup
+## Layout
 
-*To be determined once the project structure is established.*
+- `app.py` – Step 1 entry (image recognition only)
+- `app_step2.py` – Step 2 entry (adds ingredient editing + recipe generation)
+- `app_step3.py` – Step 3 entry (adds login, profile, saved recipes, dashboard)
+- `backend/` – shared modules (config, OpenRouter client, image service, recipe generator, ingredient manager, database, auth, user profile)
+- `run_step1.bat` / `run_step2.bat` / `run_step3.bat` – launch scripts
 
-## Common Commands
+## Rules
 
-*Commands will be added as the project develops and build/test infrastructure is implemented.*
-
-## Architecture Notes
-
-*Architecture details will be documented as the codebase grows.*
-
-## Important Conventions
-
-When developing in this repository:
-- Follow the patterns established in previous Study projects (Study-01, Study-02, Study-03) if applicable
-- Update this CLAUDE.md file as new patterns, commands, or architectural decisions are made
+- Never commit `.env`, `recipes.db`, `users.json`, `user_profiles.json`, or `saved_recipes.json`.
+- All new modules go under `backend/` unless they are Streamlit UI code.

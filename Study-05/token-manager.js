@@ -2,7 +2,7 @@
  * Token Management and Text Chunking Utilities
  *
  * This module provides advanced token counting, text chunking, and cost optimization
- * utilities for efficient API usage with OpenRouter and DeepSeek models.
+ * utilities for efficient API usage with OpenRouter and gpt-oss models.
  *
  * Features:
  * - Accurate token estimation for multiple languages
@@ -15,11 +15,11 @@
 class TokenManager {
     constructor(config = {}) {
         this.config = {
-            model: config.model || 'deepseek/deepseek-chat',
+            model: config.model || 'openai/gpt-oss-20b:free',
             maxTokensPerRequest: config.maxTokensPerRequest || 4000,
             reserveTokensForResponse: config.reserveTokensForResponse || 1000,
             overlapTokens: config.overlapTokens || 200,
-            costPerToken: config.costPerToken || 0.000001, // DeepSeek pricing
+            costPerToken: config.costPerToken || 0.000001, // gpt-oss pricing
             budgetLimit: config.budgetLimit || null,
             language: config.language || 'korean',
             chunkingStrategy: config.chunkingStrategy || 'semantic',
